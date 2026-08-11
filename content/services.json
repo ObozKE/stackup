@@ -1,0 +1,50 @@
+[
+  {
+    "id": "001",
+    "title": "Web Development",
+    "slug": "web-development",
+    "shortDescription": "High-performance digital products, responsive websites, and custom web applications tailored to scale your brand.",
+    "fullDescription": "We build fast, accessible, and conversion-focused web solutions engineered with modern frameworks. From bespoke brand showcases to complex web applications, our engineering ensures peak speed, SEO visibility, and seamless user experiences.",
+    "tags": ["Website", "Web App", "CMS", "E-commerce"],
+    "deliverables": [
+      "Custom Next.js & React Web Applications",
+      "Headless CMS Integration",
+      "High-converting E-commerce Platforms",
+      "Core Web Vitals & Technical SEO Optimization",
+      "Responsive Layouts & Mobile First Engineering"
+    ],
+    "featuredImage": "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "002",
+    "title": "Design",
+    "slug": "design",
+    "shortDescription": "Bold graphic design, distinctive visual identities, and dynamic UI/UX interfaces that command attention.",
+    "fullDescription": "Design at Stackup is strategic art. We craft visual identities, promotional artwork, digital design systems, and intuitive user interfaces that tell your brand's unique story and create memorable emotional connections.",
+    "tags": ["Graphic Design", "Brand Design", "UI/UX Design"],
+    "deliverables": [
+      "Brand Identity & Style Guidelines",
+      "Graphic Design Posters, Social & Print Assets",
+      "UI/UX Design Systems & Interactive Prototypes",
+      "Packaging & Marketing Collateral",
+      "Motion Graphics & Visual Assets"
+    ],
+    "featuredImage": "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "003",
+    "title": "Social Media Marketing",
+    "slug": "social-media-marketing",
+    "shortDescription": "Data-driven campaign strategies, compelling visual content, and community growth for modern brands.",
+    "fullDescription": "We transform social channels into high-impact brand drivers. Through custom content creation, targeted campaign strategy, and consistent audience engagement, we build brand authority across digital platforms.",
+    "tags": ["Content", "Campaigns", "Strategy"],
+    "deliverables": [
+      "Social Media Content Strategy & Direction",
+      "Custom Graphic & Video Asset Production",
+      "Paid Campaign Management & Ad Creatives",
+      "Community Engagement & Brand Management",
+      "Performance Analytics & Growth Reporting"
+    ],
+    "featuredImage": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop"
+  }
+]

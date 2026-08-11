@@ -1,0 +1,27 @@
+[
+  {
+    "id": "faq-1",
+    "question": "What services does Stackup specialize in?",
+    "answer": "Stackup is a full-service creative agency specializing in Web Development (custom Next.js apps, headless platforms, e-commerce), Graphic & UI/UX Design (brand identity, posters, design systems), and Social Media Marketing (content creation, paid campaigns, growth strategy)."
+  },
+  {
+    "id": "faq-2",
+    "question": "Where is Stackup based and what regions do you serve?",
+    "answer": "We are based in Nairobi, Kenya and work with bold brands, ambitious startups, and established enterprises across Kenya, East Africa, and internationally."
+  },
+  {
+    "id": "faq-3",
+    "question": "What is your typical project timeline?",
+    "answer": "Project timelines vary based on scope. Brand identity and graphic design sprints typically take 2–4 weeks. Custom web development projects generally range between 4–8 weeks from discovery to final launch."
+  },
+  {
+    "id": "faq-4",
+    "question": "How do we get started with a new project?",
+    "answer": "Simply fill out our contact form or reach out directly at hello@stackup.co.ke. We start every engagement with a discovery conversation to understand your business goals, target audience, and project deliverables."
+  },
+  {
+    "id": "faq-5",
+    "question": "Do you offer post-launch support and ongoing retainers?",
+    "answer": "Yes. We offer ongoing technical maintenance, continuous design retainers, and monthly social media marketing management to ensure your digital presence continuously performs."
+  }
+]

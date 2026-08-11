@@ -1,0 +1,32 @@
+[
+  {
+    "id": "insight-1",
+    "title": "Why Next.js App Router & Server Components Are Essential for Agency Web Builds in 2026",
+    "slug": "nextjs-app-router-agency-builds",
+    "date": "Aug 02, 2026",
+    "category": "Web Development",
+    "readTime": "5 min read",
+    "summary": "Exploring how modern React Server Components deliver unprecedented load speeds, superior SEO rankings, and seamless interactive experiences.",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    "id": "insight-2",
+    "title": "The Power of High-Contrast Visual Design & Bold Grotesque Typography",
+    "slug": "high-contrast-visual-design-typography",
+    "date": "Jul 28, 2026",
+    "category": "Graphic Design",
+    "readTime": "4 min read",
+    "summary": "Why minimalist light-mode design coupled with high-impact display typography creates unforgettable visual storytelling for contemporary brands.",
+    "image": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    "id": "insight-3",
+    "title": "Building Authentic Social Media Presence for Nairobi & Global Audiences",
+    "slug": "building-authentic-social-presence",
+    "date": "Jul 15, 2026",
+    "category": "Social Marketing",
+    "readTime": "6 min read",
+    "summary": "Strategies for crafting visual content that resonates deeply with modern digital communities and drives measurable ROI.",
+    "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop"
+  }
+]
