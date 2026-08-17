@@ -9,31 +9,7 @@
     "tags": ["Next.js", "React", "Fintech", "UI/UX"],
     "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
     "year": "2026",
-    "isGraphicDesignShowcase": false
-  },
-  {
-    "id": "proj-2",
-    "title": "Kazi Workspace Brand Identity",
-    "slug": "kazi-workspace-brand-identity",
-    "category": "Design",
-    "subtitle": "Brand Identity & Design System",
-    "summary": "Complete brand overhaul and modern design system for a premier co-working brand.",
-    "tags": ["Brand Design", "Typography", "Visual System"],
-    "image": "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop",
-    "year": "2026",
-    "isGraphicDesignShowcase": false
-  },
-  {
-    "id": "proj-3",
-    "title": "Savanna Digital Campaign",
-    "slug": "savanna-digital-campaign",
-    "category": "Social Media Management",
-    "subtitle": "Multi-Channel Social Campaign",
-    "summary": "Content strategy and targeted social media ads delivering 3x audience engagement boost.",
-    "tags": ["Campaigns", "Content Creation", "Analytics"],
-    "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop",
-    "year": "2025",
-    "isGraphicDesignShowcase": false
+    "websiteUrl": "https://stackup.co.ke"
   },
   {
     "id": "proj-4",
@@ -45,78 +21,88 @@
     "tags": ["E-commerce", "Next.js", "Tailwind CSS"],
     "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
     "year": "2025",
-    "isGraphicDesignShowcase": false
+    "websiteUrl": "https://stackup.co.ke"
   },
   {
-    "id": "gd-1",
-    "title": "Minimalist Poster Series — Boldway",
-    "slug": "minimalist-poster-series",
-    "category": "Design",
-    "medium": "Print Poster / Graphic Design",
-    "summary": "Experimental typography poster campaign exploring heavy grotesque font pairings and geometric contrasts.",
-    "tags": ["Graphic Design", "Poster", "Typography"],
-    "image": "https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=1000&auto=format&fit=crop",
-    "aspect": "vertical",
-    "isGraphicDesignShowcase": true
+    "id": "proj-2",
+    "title": "Kazi Workspace Brand Identity",
+    "slug": "kazi-workspace-brand-identity",
+    "category": "Brand Design",
+    "subtitle": "Brand Identity & Design System",
+    "summary": "Complete brand overhaul and modern design system for a premier co-working brand.",
+    "tags": ["Brand Design", "Typography", "Visual System"],
+    "image": "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop",
+    "year": "2026"
   },
   {
     "id": "gd-2",
     "title": "Urban Beats Festival Identity",
     "slug": "urban-beats-festival-identity",
-    "category": "Design",
+    "category": "Brand Design",
     "medium": "Brand Artwork & Event Graphics",
     "summary": "High-contrast visual design assets and promotional graphic flyers for a contemporary music event.",
-    "tags": ["Graphic Design", "Brand Artwork", "Event"],
-    "image": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1000&auto=format&fit=crop",
-    "aspect": "square",
-    "isGraphicDesignShowcase": true
+    "tags": ["Brand Artwork", "Event"],
+    "image": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1000&auto=format&fit=crop"
   },
   {
-    "id": "gd-3",
-    "title": "Botanica Packaging Mockup",
-    "slug": "botanica-packaging-mockup",
-    "category": "Design",
-    "medium": "Package & Label Graphic Design",
-    "summary": "Modern packaging artwork utilizing organic color swatches and clean typographic structures.",
-    "tags": ["Packaging", "Graphic Design", "Print"],
-    "image": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=1000&auto=format&fit=crop",
-    "aspect": "vertical",
-    "isGraphicDesignShowcase": true
-  },
-  {
-    "id": "gd-4",
-    "title": "Contemporary Exhibition Catalog",
-    "slug": "contemporary-exhibition-catalog",
-    "category": "Design",
-    "medium": "Editorial & Print Layout",
-    "summary": "Minimal editorial design and editorial layout for a Nairobi art showcase.",
-    "tags": ["Editorial", "Graphic Design", "Print"],
-    "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1000&auto=format&fit=crop",
-    "aspect": "horizontal",
-    "isGraphicDesignShowcase": true
+    "id": "proj-3",
+    "title": "Savanna Digital Campaign",
+    "slug": "savanna-digital-campaign",
+    "category": "Social Media Management",
+    "subtitle": "Multi-Channel Social Campaign",
+    "summary": "Content strategy and targeted social media ads delivering 3x audience engagement boost.",
+    "tags": ["Campaigns", "Content Creation", "Analytics"],
+    "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop",
+    "year": "2025"
   },
   {
     "id": "gd-5",
     "title": "Sonic Waves Social Media Asset Pack",
     "slug": "sonic-waves-social-pack",
-    "category": "Design",
+    "category": "Social Media Management",
     "medium": "Digital Graphic Assets",
     "summary": "Custom digital carousel templates and story graphics tailored for high-engagement Instagram channels.",
-    "tags": ["Social Assets", "Graphic Design", "Digital"],
-    "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
-    "aspect": "square",
-    "isGraphicDesignShowcase": true
+    "tags": ["Social Assets", "Digital"],
+    "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    "id": "gd-1",
+    "title": "Minimalist Poster Series — Boldway",
+    "slug": "minimalist-poster-series",
+    "category": "Graphic Design",
+    "medium": "Print Poster / Graphic Design",
+    "summary": "Experimental typography poster campaign exploring heavy grotesque font pairings and geometric contrasts.",
+    "tags": ["Graphic Design", "Poster", "Typography"],
+    "image": "https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    "id": "gd-3",
+    "title": "Botanica Packaging Mockup",
+    "slug": "botanica-packaging-mockup",
+    "category": "Graphic Design",
+    "medium": "Package & Label Graphic Design",
+    "summary": "Modern packaging artwork utilizing organic color swatches and clean typographic structures.",
+    "tags": ["Packaging", "Print"],
+    "image": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    "id": "gd-4",
+    "title": "Contemporary Exhibition Catalog",
+    "slug": "contemporary-exhibition-catalog",
+    "category": "Graphic Design",
+    "medium": "Editorial & Print Layout",
+    "summary": "Minimal editorial design and editorial layout for a Nairobi art showcase.",
+    "tags": ["Editorial", "Print"],
+    "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1000&auto=format&fit=crop"
   },
   {
     "id": "gd-6",
     "title": "Vanguard Typography Billboard",
     "slug": "vanguard-typography-billboard",
-    "category": "Design",
+    "category": "Graphic Design",
     "medium": "Out-of-Home Billboard Artwork",
     "summary": "Large scale outdoor graphic design layout utilizing Stackup's signature high-contrast display typography.",
-    "tags": ["Billboard", "Graphic Design", "OOH"],
-    "image": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=1000&auto=format&fit=crop",
-    "aspect": "horizontal",
-    "isGraphicDesignShowcase": true
+    "tags": ["Billboard", "OOH"],
+    "image": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=1000&auto=format&fit=crop"
   }
 ]

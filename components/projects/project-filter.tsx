@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 interface ProjectItem {
   id: string;
@@ -14,6 +13,7 @@ interface ProjectItem {
   tags?: string[];
   image: string;
   fallbackImage?: string;
+  websiteUrl?: string;
   medium?: string;
 }
 
@@ -22,20 +22,19 @@ interface ProjectFilterProps {
 }
 
 const CATEGORIES = [
-  "All",
   "Web Development",
-  "Design",
+  "Brand Design",
   "Social Media Management",
+  "Graphic Design",
 ];
 
 export default function ProjectFilter({ projects }: ProjectFilterProps) {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("Web Development");
   const [imgErrors, setImgErrors] = useState<Record<string, boolean>>({});
 
-  const filteredProjects =
-    selectedCategory === "All"
-      ? projects
-      : projects.filter((p) => p.category === selectedCategory);
+  const filteredProjects = projects.filter(
+    (p) => p.category === selectedCategory
+  );
 
   const handleImageError = (id: string) => {
     setImgErrors((prev) => ({ ...prev, [id]: true }));
@@ -43,7 +42,7 @@ export default function ProjectFilter({ projects }: ProjectFilterProps) {
 
   return (
     <div className="space-y-12">
-      {/* Category Filter Tabs */}
+      {/* Category Filter Tabs (Web Development, Brand Design, Social Media Management, Graphic Design) */}
       <div className="flex flex-wrap items-center justify-center gap-2 p-2 bg-surface rounded-full border border-surface-border max-w-fit mx-auto">
         {CATEGORIES.map((cat) => {
           const isActive = selectedCategory === cat;
@@ -63,7 +62,7 @@ export default function ProjectFilter({ projects }: ProjectFilterProps) {
         })}
       </div>
 
-      {/* Projects Grid with Reduced Height Cards */}
+      {/* Projects Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProjects.map((project) => {
           const imageSrc =
@@ -71,10 +70,15 @@ export default function ProjectFilter({ projects }: ProjectFilterProps) {
               ? project.fallbackImage
               : project.image;
 
+          const isWebDev = project.category === "Web Development";
+          const targetUrl = project.websiteUrl || `/contact?service=${encodeURIComponent(project.category)}`;
+
           return (
-            <Link
+            <a
               key={project.id}
-              href={`/contact?service=${encodeURIComponent(project.category)}`}
+              href={targetUrl}
+              target={isWebDev && project.websiteUrl ? "_blank" : "_self"}
+              rel="noopener noreferrer"
               className="w-full aspect-[16/10] sm:aspect-[4/3] rounded-[24px] overflow-hidden relative group border border-surface-border shadow-2xs bg-surface"
             >
               {/* Background Image */}
@@ -87,13 +91,15 @@ export default function ProjectFilter({ projects }: ProjectFilterProps) {
                 onError={() => handleImageError(project.id)}
               />
 
-              {/* Category Label Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
-                <span className="text-xs text-white/80 uppercase tracking-widest block font-semibold">
-                  {project.category}
-                </span>
-              </div>
-            </Link>
+              {/* Category Label Overlay ONLY for Web Development */}
+              {isWebDev && (
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+                  <span className="text-xs text-white/80 uppercase tracking-widest block font-semibold">
+                    {project.category}
+                  </span>
+                </div>
+              )}
+            </a>
           );
         })}
       </div>
