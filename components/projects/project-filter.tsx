@@ -25,7 +25,7 @@ const CATEGORIES = [
   "All",
   "Web Development",
   "Design",
-  "Social Media Marketing",
+  "Social Media Management",
 ];
 
 export default function ProjectFilter({ projects }: ProjectFilterProps) {

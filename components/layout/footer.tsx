@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Phone, Mail } from "lucide-react";
+import SocialLinks from "@/components/ui/social-links";
 
 export default function Footer() {
   const exploreLinks = [
@@ -13,14 +14,8 @@ export default function Footer() {
   const utilityLinks = [
     { label: "Web Development", href: "/services#web-development" },
     { label: "Design", href: "/services#design" },
-    { label: "Social Media Marketing", href: "/services#social-media-marketing" },
+    { label: "Social Media Management", href: "/services#social-media-management" },
     { label: "Contact Us", href: "/contact" },
-  ];
-
-  const socialLinks = [
-    { label: "Instagram", href: "https://instagram.com" },
-    { label: "LinkedIn", href: "https://linkedin.com" },
-    { label: "X / Twitter", href: "https://x.com" },
   ];
 
   return (
@@ -86,32 +81,32 @@ export default function Footer() {
 
         {/* Contact & Social Strip */}
         <div className="pt-8 border-t border-surface-border grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          {/* Email Direct */}
-          <div className="md:col-span-6 space-y-1">
+          {/* Email Direct & Phone */}
+          <div className="md:col-span-7 space-y-3">
             <span className="text-xs uppercase tracking-wider text-muted-foreground block font-medium">
               Start a Conversation
             </span>
-            <a
-              href="mailto:hello@stackup.co.ke"
-              className="font-display text-2xl sm:text-3xl text-foreground hover:text-primary transition-colors underline decoration-primary/40 underline-offset-4"
-            >
-              hello@stackup.co.ke
-            </a>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
+              <a
+                href="mailto:stackupke@gmail.com"
+                className="font-display text-xl sm:text-2xl text-foreground hover:text-primary transition-colors underline decoration-primary/40 underline-offset-4 flex items-center gap-2"
+              >
+                <Mail className="w-5 h-5 text-primary shrink-0" />
+                <span>stackupke@gmail.com</span>
+              </a>
+              <a
+                href="tel:0790870596"
+                className="font-display text-xl sm:text-2xl text-foreground hover:text-primary transition-colors underline decoration-primary/40 underline-offset-4 flex items-center gap-2"
+              >
+                <Phone className="w-5 h-5 text-primary shrink-0" />
+                <span>0790870596</span>
+              </a>
+            </div>
           </div>
 
-          {/* Social Links */}
-          <div className="md:col-span-6 flex flex-wrap items-center md:justify-end gap-3">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-surface hover:bg-foreground hover:text-background text-foreground text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-200 border border-surface-border"
-              >
-                {social.label}
-              </a>
-            ))}
+          {/* Social Icons */}
+          <div className="md:col-span-5 flex items-center md:justify-end">
+            <SocialLinks />
           </div>
         </div>
 

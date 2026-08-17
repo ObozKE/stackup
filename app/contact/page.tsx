@@ -1,21 +1,16 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import ContactForm from "@/components/contact/contact-form";
-import { Mail, ArrowUpRight } from "lucide-react";
+import SocialLinks from "@/components/ui/social-links";
+import { Mail, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact Us — Stackup Creative Agency",
   description:
-    "Get in touch with Stackup, a creative agency in Nairobi, Kenya. Send your project brief for Web Development, Design, or Social Media Marketing.",
+    "Get in touch with Stackup, a creative agency in Nairobi, Kenya. Send your project brief for Web Development, Design, or Social Media Management.",
 };
 
 export default function ContactPage() {
-  const socialLinks = [
-    { label: "Instagram", href: "https://instagram.com" },
-    { label: "LinkedIn", href: "https://linkedin.com" },
-    { label: "X / Twitter", href: "https://x.com" },
-  ];
-
   return (
     <>
       {/* Header */}
@@ -27,9 +22,6 @@ export default function ContactPage() {
           <h1 className="font-display text-5xl sm:text-7xl md:text-8xl uppercase tracking-tighter text-foreground max-w-4xl">
             LET&apos;S TALK ABOUT YOUR NEXT PROJECT.
           </h1>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl font-sans leading-relaxed">
-            Have a new web project, brand design overhaul, or marketing campaign in mind? Reach out and let&apos;s craft something extraordinary together.
-          </p>
         </div>
       </section>
 
@@ -38,7 +30,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             {/* Left Info Column */}
-            <div className="lg:col-span-5 space-y-10 lg:sticky lg:top-28">
+            <div className="lg:col-span-5 space-y-8 lg:sticky lg:top-28">
               <div className="space-y-4">
                 <span className="text-xs uppercase tracking-widest text-primary font-bold block">
                   • Direct Reach •
@@ -47,7 +39,7 @@ export default function ContactPage() {
                   CONNECT DIRECTLY WITH OUR TEAM
                 </h2>
                 <p className="text-muted-foreground text-base leading-relaxed">
-                  We respond to all project inquiries within 24 business hours. Tell us about your vision, goals, and timeline.
+                  We respond to all project inquiries within 24 business hours.
                 </p>
               </div>
 
@@ -60,48 +52,35 @@ export default function ContactPage() {
                   </span>
                 </div>
                 <a
-                  href="mailto:hello@stackup.co.ke"
+                  href="mailto:stackupke@gmail.com"
                   className="font-display text-2xl sm:text-3xl text-foreground hover:text-primary transition-colors underline decoration-primary/40 block break-words"
                 >
-                  hello@stackup.co.ke
+                  stackupke@gmail.com
                 </a>
-                <p className="text-xs text-muted-foreground">
-                  Available for new project briefs and strategic consultations.
-                </p>
               </div>
 
-              {/* Location Region Note (No street address!) */}
-              <div className="p-8 rounded-[20px] bg-surface border border-surface-border space-y-3">
-                <span className="text-xs uppercase tracking-widest font-bold text-muted-foreground block">
-                  Service Region
-                </span>
-                <h3 className="font-display text-xl uppercase text-foreground">
-                  NAIROBI, KENYA & GLOBAL
-                </h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  Serving clients across Kenya, East Africa, and international markets through seamless digital collaboration.
-                </p>
+              {/* Phone Card */}
+              <div className="p-8 rounded-[20px] bg-surface border border-surface-border space-y-4">
+                <div className="flex items-center gap-3 text-primary">
+                  <Phone className="w-6 h-6" />
+                  <span className="text-xs uppercase tracking-widest font-bold text-foreground">
+                    Call / WhatsApp Us
+                  </span>
+                </div>
+                <a
+                  href="tel:0790870596"
+                  className="font-display text-2xl sm:text-3xl text-foreground hover:text-primary transition-colors underline decoration-primary/40 block"
+                >
+                  0790870596
+                </a>
               </div>
 
-              {/* Social Channels */}
-              <div className="space-y-3">
+              {/* Social Channels with SVG Icons */}
+              <div className="space-y-3 pt-2">
                 <span className="text-xs uppercase tracking-widest font-bold text-muted-foreground block">
                   Follow Stackup
                 </span>
-                <div className="flex flex-wrap gap-2">
-                  {socialLinks.map((social) => (
-                    <a
-                      key={social.label}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-4 py-2 bg-surface hover:bg-foreground hover:text-background text-foreground text-xs font-semibold uppercase tracking-wider rounded-full transition-all border border-surface-border"
-                    >
-                      <span>{social.label}</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                    </a>
-                  ))}
-                </div>
+                <SocialLinks />
               </div>
             </div>
 

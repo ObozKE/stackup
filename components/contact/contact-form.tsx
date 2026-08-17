@@ -42,7 +42,7 @@ export default function ContactForm() {
             THANK YOU FOR REACHING OUT!
           </h3>
           <p className="text-muted-foreground text-sm max-w-md mx-auto">
-            Your project details have been recorded. We will review your brief and respond within 24 business hours.
+            Your project details have been recorded. We will review your inquiry and respond within 24 business hours.
           </p>
           <div className="pt-4">
             <button
@@ -111,24 +111,25 @@ export default function ContactForm() {
               className="w-full px-4 py-3.5 rounded-xl bg-surface border border-surface-border text-foreground focus:outline-none focus:border-primary transition-colors text-sm font-medium"
             >
               <option value="Web Development">Web Development</option>
-              <option value="Design">Graphic & Brand Design</option>
-              <option value="Social Media Marketing">Social Media Marketing</option>
-              <option value="Full Agency Scope">Full Agency Scope</option>
+              <option value="Graphic Design">Graphic Design</option>
+              <option value="Brand Design">Brand Design</option>
+              <option value="Product Design">Product Design</option>
+              <option value="Social Media Management">Social Media Management</option>
+              <option value="Other">Other</option>
             </select>
           </div>
 
-          {/* Project Details Message */}
+          {/* Project Details Message (Optional) */}
           <div className="space-y-2">
             <label
               htmlFor="message"
               className="text-xs uppercase tracking-widest font-bold text-foreground block"
             >
-              Project Brief / Details *
+              Project Brief / Details (Optional)
             </label>
             <textarea
               id="message"
               name="entry.1000004" // {{TODO: Replace entry ID with your Google Form field ID}}
-              required
               rows={5}
               placeholder="Tell us about your project goals, timelines, and requirements..."
               value={formData.message}

@@ -70,7 +70,7 @@ export default function AboutPage() {
                 At Stackup, we believe modern brands win at the intersection of striking design and technical performance. A beautiful website that loads slowly fails your business; a fast website with mediocre design fails your brand.
               </p>
               <p className="text-muted-foreground text-base leading-relaxed">
-                Our multi-disciplinary discipline combines Web Development, Graphic & Brand Design, and Social Media Marketing into one seamless agency experience.
+                Our multi-disciplinary discipline combines Web Development, Graphic & Brand Design, and Social Media Management into one seamless agency experience.
               </p>
               <div className="pt-2">
                 <Link

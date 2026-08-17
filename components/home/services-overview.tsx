@@ -43,7 +43,7 @@ export default function ServicesOverview() {
                     <h3 className="font-display text-2xl sm:text-3xl text-foreground uppercase tracking-tight group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
-                    <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
+                    <p className="mt-2 text-sm text-muted-foreground">
                       {service.shortDescription}
                     </p>
                   </div>

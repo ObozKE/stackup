@@ -6,7 +6,7 @@ import CTABand from "@/components/home/cta-band";
 export const metadata: Metadata = {
   title: "Projects & Portfolio — Stackup Creative Agency",
   description:
-    "Explore Stackup's featured work across Web Development, Brand Identity, Graphic Design, and Social Media Marketing.",
+    "Explore Stackup's featured work across Web Development, Brand Identity, Graphic Design, and Social Media Management.",
 };
 
 export default function ProjectsPage() {
