@@ -1,0 +1,38 @@
+[
+  {
+    "id": "featured-1",
+    "category": "Brand Poster",
+    "image": "/images/featured/featured-1.jpg",
+    "fallbackImage": "https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "id": "featured-2",
+    "category": "Product & Packaging Design",
+    "image": "/images/featured/featured-2.jpg",
+    "fallbackImage": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "id": "featured-3",
+    "category": "Social Media Campaign",
+    "image": "/images/featured/featured-3.jpg",
+    "fallbackImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "id": "featured-4",
+    "category": "UI/UX & Brand Identity",
+    "image": "/images/featured/featured-4.jpg",
+    "fallbackImage": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "id": "featured-5",
+    "category": "Event Artwork & Motion",
+    "image": "/images/featured/featured-5.jpg",
+    "fallbackImage": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "id": "featured-6",
+    "category": "Editorial Design",
+    "image": "/images/featured/featured-6.jpg",
+    "fallbackImage": "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=800&auto=format&fit=crop"
+  }
+]

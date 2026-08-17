@@ -16,24 +16,13 @@ export default function CTABand() {
           LET&apos;S BUILD SOMETHING EXTRAORDINARY.
         </h2>
 
-        <p className="text-lg sm:text-xl text-muted-foreground font-sans max-w-2xl mx-auto leading-relaxed">
-          Partner with Stackup to transform your digital strategy into high-converting web apps, unforgettable visual design, and powerful social campaigns.
-        </p>
-
-        <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-6">
+        <div className="pt-4 flex items-center justify-center">
           <Link
             href="/contact"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-9 py-4 bg-primary text-primary-foreground font-bold text-base rounded-full hover:bg-primary/90 transition-all shadow-md hover:shadow-lg group"
           >
             <span>Start Your Project</span>
             <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-          </Link>
-          <Link
-            href="/projects"
-            className="inline-flex items-center gap-1.5 text-base font-bold text-foreground hover:text-primary transition-colors underline underline-offset-8 decoration-primary/40"
-          >
-            <span>Explore Case Studies</span>
-            <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>
       </div>

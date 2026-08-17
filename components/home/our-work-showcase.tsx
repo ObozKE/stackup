@@ -1,12 +1,14 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
+import featuredData from "@/content/featured-work.json";
 
 export default function OurWorkShowcase() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [imgErrors, setImgErrors] = useState<Record<string, boolean>>({});
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
@@ -19,50 +21,9 @@ export default function OurWorkShowcase() {
     }
   };
 
-  const showcaseCards = [
-    {
-      id: "card-1",
-      title: "Boldway Typographic Statement",
-      category: "Brand Poster",
-      image: "https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=800&auto=format&fit=crop",
-      tag: "BRANDING",
-    },
-    {
-      id: "card-2",
-      title: "Émeute Luxury Product Packaging",
-      category: "Product & Packaging Design",
-      image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=800&auto=format&fit=crop",
-      tag: "PACKAGING",
-    },
-    {
-      id: "card-3",
-      title: "Client Social & Feed Creation",
-      category: "Social Media Campaign",
-      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
-      tag: "SOCIAL FEED",
-    },
-    {
-      id: "card-4",
-      title: "Before & After Wellness Studio Rebrand",
-      category: "UI/UX & Brand Identity",
-      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop",
-      tag: "REBRAND",
-    },
-    {
-      id: "card-5",
-      title: "Nebula Project Open Call Poster",
-      category: "Event Artwork & Motion",
-      image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=800&auto=format&fit=crop",
-      tag: "PROMO",
-    },
-    {
-      id: "card-6",
-      title: "Contemporary Art Exhibition Catalogue",
-      category: "Editorial Design",
-      image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=800&auto=format&fit=crop",
-      tag: "EDITORIAL",
-    },
-  ];
+  const handleImageError = (id: string) => {
+    setImgErrors((prev) => ({ ...prev, [id]: true }));
+  };
 
   return (
     <section className="py-24 bg-background border-t border-surface-border overflow-hidden">
@@ -113,39 +74,34 @@ export default function OurWorkShowcase() {
           className="flex gap-6 overflow-x-auto scrollbar-none py-2 snap-x snap-mandatory scroll-smooth -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          {showcaseCards.map((card) => (
-            <Link
-              key={card.id}
-              href="/projects"
-              className="snap-center shrink-0 w-[280px] sm:w-[340px] aspect-[4/5] rounded-[24px] overflow-hidden relative group border border-surface-border shadow-2xs bg-surface"
-            >
-              {/* Background Image */}
-              <Image
-                src={card.image}
-                alt={card.title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 640px) 280px, 340px"
-              />
+          {featuredData.map((card) => {
+            const imageSrc = imgErrors[card.id] ? card.fallbackImage : card.image;
 
-              {/* Permanently Visible Text & Tags (No Hover Effect) */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-between p-6 text-white">
-                <span className="text-[11px] uppercase tracking-wider font-bold text-primary bg-white/95 px-3 py-1 rounded-full self-start shadow-xs">
-                  {card.tag}
-                </span>
+            return (
+              <Link
+                key={card.id}
+                href="/projects"
+                className="snap-center shrink-0 w-[280px] sm:w-[340px] aspect-[4/5] rounded-[24px] overflow-hidden relative group border border-surface-border shadow-2xs bg-surface"
+              >
+                {/* Background Image */}
+                <Image
+                  src={imageSrc}
+                  alt={card.category}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 280px, 340px"
+                  onError={() => handleImageError(card.id)}
+                />
 
-                <div className="space-y-1.5">
+                {/* Only Category Label Remaining */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
                   <span className="text-xs text-white/80 uppercase tracking-widest block font-semibold">
                     {card.category}
                   </span>
-                  <h3 className="font-display text-2xl uppercase tracking-tight text-white flex items-center justify-between gap-2">
-                    <span>{card.title}</span>
-                    <ArrowUpRight className="w-5 h-5 shrink-0 text-white/90" />
-                  </h3>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

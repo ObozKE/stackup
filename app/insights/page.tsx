@@ -53,26 +53,17 @@ export default function InsightsPage() {
                 <div className="p-8 flex-1 flex flex-col justify-between space-y-6">
                   <div className="space-y-3">
                     <div className="flex items-center gap-3 text-xs font-semibold text-muted-foreground">
-                      <span className="px-3 py-1 rounded-full bg-surface border border-surface-border text-foreground">
-                        {article.category}
-                      </span>
-                      <span>•</span>
                       <span>{article.readTime}</span>
+                      <span>•</span>
+                      <span>{article.date}</span>
                     </div>
 
                     <h2 className="font-display text-2xl sm:text-3xl text-foreground uppercase tracking-tight group-hover:text-primary transition-colors">
                       {article.title}
                     </h2>
-
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {article.summary}
-                    </p>
                   </div>
 
                   <div className="pt-4 border-t border-surface-border flex items-center justify-between">
-                    <span className="text-xs font-semibold text-muted-foreground">
-                      {article.date}
-                    </span>
                     <span className="text-xs font-bold text-foreground group-hover:text-primary transition-colors inline-flex items-center gap-1">
                       Read Story <ArrowUpRight className="w-3.5 h-3.5" />
                     </span>

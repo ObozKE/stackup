@@ -26,8 +26,8 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-tan: var(--tan);
 
-  --font-display: var(--font-display), "Anton", sans-serif;
-  --font-sans: var(--font-sans), "Inter", sans-serif;
+  --font-display: var(--font-poppins), sans-serif;
+  --font-sans: var(--font-poppins), sans-serif;
 }
 
 html {
@@ -37,11 +37,12 @@ html {
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-poppins), sans-serif;
   overflow-x: hidden;
 }
 
 .font-display {
-  font-family: var(--font-display);
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 800;
   letter-spacing: -0.02em;
 }

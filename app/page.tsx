@@ -62,18 +62,11 @@ export default function Home() {
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                   <div className="space-y-3">
                     <div className="flex items-center gap-3 text-xs font-semibold text-muted-foreground">
-                      <span className="px-2.5 py-0.5 rounded-full bg-surface border border-surface-border text-foreground">
-                        {article.category}
-                      </span>
-                      <span>•</span>
                       <span>{article.date}</span>
                     </div>
                     <h3 className="font-display text-xl sm:text-2xl text-foreground uppercase tracking-tight line-clamp-2 group-hover:text-primary transition-colors">
                       {article.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm line-clamp-3">
-                      {article.summary}
-                    </p>
                   </div>
                   <div className="pt-2">
                     <span className="text-xs font-bold text-foreground group-hover:text-primary transition-colors inline-flex items-center gap-1">

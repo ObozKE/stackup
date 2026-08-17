@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
-import GraphicDesignGallery, { GraphicDesignItem } from "./graphic-design-gallery";
+import Link from "next/link";
 
 interface ProjectItem {
   id: string;
@@ -11,12 +10,11 @@ interface ProjectItem {
   slug: string;
   category: string;
   subtitle?: string;
-  summary: string;
-  tags: string[];
+  summary?: string;
+  tags?: string[];
   image: string;
-  year?: string;
+  fallbackImage?: string;
   medium?: string;
-  isGraphicDesignShowcase: boolean;
 }
 
 interface ProjectFilterProps {
@@ -32,20 +30,20 @@ const CATEGORIES = [
 
 export default function ProjectFilter({ projects }: ProjectFilterProps) {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [imgErrors, setImgErrors] = useState<Record<string, boolean>>({});
 
-  const caseStudies = projects.filter((p) => !p.isGraphicDesignShowcase);
-  const graphicDesignItems = projects.filter(
-    (p) => p.isGraphicDesignShowcase
-  ) as unknown as GraphicDesignItem[];
-
-  const filteredCaseStudies =
+  const filteredProjects =
     selectedCategory === "All"
-      ? caseStudies
-      : caseStudies.filter((p) => p.category === selectedCategory);
+      ? projects
+      : projects.filter((p) => p.category === selectedCategory);
+
+  const handleImageError = (id: string) => {
+    setImgErrors((prev) => ({ ...prev, [id]: true }));
+  };
 
   return (
-    <div className="space-y-16">
-      {/* Category Tabs */}
+    <div className="space-y-12">
+      {/* Category Filter Tabs */}
       <div className="flex flex-wrap items-center justify-center gap-2 p-2 bg-surface rounded-full border border-surface-border max-w-fit mx-auto">
         {CATEGORIES.map((cat) => {
           const isActive = selectedCategory === cat;
@@ -65,90 +63,40 @@ export default function ProjectFilter({ projects }: ProjectFilterProps) {
         })}
       </div>
 
-      {/* Case Studies Grid */}
-      <div className="space-y-8">
-        <div className="flex items-center justify-between border-b border-surface-border pb-4">
-          <h2 className="font-display text-2xl uppercase tracking-tight text-foreground">
-            Case Studies ({filteredCaseStudies.length})
-          </h2>
-          <span className="text-xs text-muted-foreground uppercase font-semibold tracking-wider">
-            Category: {selectedCategory}
-          </span>
-        </div>
+      {/* Projects Grid with Reduced Height Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {filteredProjects.map((project) => {
+          const imageSrc =
+            imgErrors[project.id] && project.fallbackImage
+              ? project.fallbackImage
+              : project.image;
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {filteredCaseStudies.map((project) => (
-            <div
+          return (
+            <Link
               key={project.id}
-              className="group flex flex-col bg-background rounded-[24px] border border-surface-border overflow-hidden hover:border-primary/40 transition-all duration-300 shadow-2xs hover:shadow-md"
+              href={`/contact?service=${encodeURIComponent(project.category)}`}
+              className="w-full aspect-[16/10] sm:aspect-[4/3] rounded-[24px] overflow-hidden relative group border border-surface-border shadow-2xs bg-surface"
             >
-              {/* Image Container */}
-              <div className="relative aspect-[16/10] w-full overflow-hidden bg-surface">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute top-4 right-4 p-3 rounded-full bg-foreground text-background group-hover:bg-primary group-hover:text-primary-foreground transition-colors shadow-md">
-                  <ArrowUpRight className="w-4 h-4" />
-                </div>
-                {project.year && (
-                  <span className="absolute bottom-4 left-4 bg-background/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold text-foreground border border-surface-border">
-                    {project.year}
-                  </span>
-                )}
+              {/* Background Image */}
+              <Image
+                src={imageSrc}
+                alt={project.title || project.category}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                onError={() => handleImageError(project.id)}
+              />
+
+              {/* Category Label Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+                <span className="text-xs text-white/80 uppercase tracking-widest block font-semibold">
+                  {project.category}
+                </span>
               </div>
-
-              {/* Content */}
-              <div className="p-8 flex-1 flex flex-col justify-between space-y-6">
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="px-3 py-1 bg-surface border border-surface-border text-foreground font-semibold text-xs rounded-full">
-                      {project.category}
-                    </span>
-                    {project.subtitle && (
-                      <span className="text-xs text-muted-foreground">
-                        {project.subtitle}
-                      </span>
-                    )}
-                  </div>
-
-                  <h3 className="font-display text-2xl sm:text-3xl text-foreground uppercase tracking-tight group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
-
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {project.summary}
-                  </p>
-                </div>
-
-                <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-surface-border">
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-[11px] bg-surface text-muted-foreground px-2.5 py-0.5 rounded-full font-medium"
-                      >
-                        #{tag}
-                      </span>
-                    ))}
-                  </div>
-                  <span className="text-xs font-bold text-foreground group-hover:text-primary transition-colors inline-flex items-center gap-1">
-                    View Project <ArrowUpRight className="w-3.5 h-3.5" />
-                  </span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+            </Link>
+          );
+        })}
       </div>
-
-      {/* Dedicated Graphic Design Showcase Section */}
-      {(selectedCategory === "All" || selectedCategory === "Design") && (
-        <GraphicDesignGallery items={graphicDesignItems} />
-      )}
     </div>
   );
 }
