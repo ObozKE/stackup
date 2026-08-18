@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 115" width="100%" height="100%">
+  <defs>
+    <!-- Mask to create the precise vertical and horizontal stencil gaps -->
+    <mask id="cutout">
+      <rect x="0" y="0" width="100" height="115" fill="white" />
+      <rect x="47.5" y="0" width="5" height="115" fill="black" />
+      <rect x="0" y="32.5" width="100" height="5" fill="black" />
+      <rect x="0" y="62.5" width="100" height="5" fill="black" />
+    </mask>
+  </defs>
+
+  <g stroke="#ffffff" stroke-width="10" fill="none" stroke-linecap="butt" mask="url(#cutout)">
+    <!-- Top 'S' Arc -->
+    <path d="M 35,35 A 15,15 0 0,1 65,35" />
+
+    <!-- Left 'U' Stem -->
+    <line x1="20" y1="30" x2="20" y2="70" />
+
+    <!-- Right 'U' Stem -->
+    <line x1="80" y1="30" x2="80" y2="70" />
+
+    <!-- Inner 'S' Cross (Left) -->
+    <path d="M 35,35 A 15,15 0 0,0 50,50" />
+
+    <!-- Inner 'S' Cross (Right) -->
+    <path d="M 50,50 A 15,15 0 0,1 65,65" />
+
+    <!-- Bottom 'S' Arc -->
+    <path d="M 65,65 A 15,15 0 0,1 35,65" />
+
+    <!-- Bottom 'U' Arc -->
+    <path d="M 80,65 A 30,30 0 0,1 20,65" />
+  </g>
+</svg>

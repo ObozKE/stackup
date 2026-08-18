@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function CTABand() {
   return (
-    <section className="py-24 sm:py-32 bg-background border-t border-surface-border relative overflow-hidden">
+    <section className="py-20 sm:py-32 bg-background border-t border-surface-border relative overflow-hidden">
       {/* Subtle Background Radial Gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent pointer-events-none" />
 
@@ -12,7 +12,7 @@ export default function CTABand() {
           • Ready to Elevate Your Brand? •
         </span>
 
-        <h2 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl uppercase tracking-tighter text-foreground leading-[0.88] max-w-5xl mx-auto">
+        <h2 className="font-display text-3xl sm:text-7xl md:text-8xl lg:text-9xl uppercase tracking-tighter text-foreground leading-[0.92] sm:leading-[0.88] max-w-5xl mx-auto break-words sm:break-normal">
           LET&apos;S BUILD SOMETHING EXTRAORDINARY.
         </h2>
 

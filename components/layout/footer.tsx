@@ -21,25 +21,50 @@ export default function Footer() {
   return (
     <footer className="bg-background border-t border-surface-border pt-16 pb-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-        {/* Top Header Row with Wordmark */}
+        {/* Top Header Row */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          {/* Giant Wordmark Section */}
-          <div className="lg:col-span-6 space-y-4">
+          {/* Left Column: Wordmark + Contact Info & Socials */}
+          <div className="lg:col-span-6 space-y-6">
             <Link href="/" className="inline-block group">
               <span className="font-display text-7xl sm:text-8xl md:text-9xl tracking-tighter text-primary block leading-none select-none group-hover:opacity-90 transition-opacity">
                 STACKUP
               </span>
             </Link>
-            <p className="text-muted-foreground text-lg max-w-md font-sans">
-              Creative agency based in Nairobi, Kenya. We engineer high-performance web products, craft iconic design systems, and direct high-impact marketing campaigns.
-            </p>
+
+            {/* Direct Contact Info (Regular weight, non-bold) & Socials */}
+            <div className="space-y-4 pt-2">
+              <span className="text-xs uppercase tracking-widest text-muted-foreground block font-semibold">
+                Start a Conversation
+              </span>
+
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+                <a
+                  href="mailto:stackupke@gmail.com"
+                  className="font-sans text-base sm:text-lg font-normal text-foreground/90 hover:text-primary transition-colors underline decoration-primary/40 underline-offset-4 flex items-center gap-2"
+                >
+                  <Mail className="w-4 h-4 text-primary shrink-0" />
+                  <span>stackupke@gmail.com</span>
+                </a>
+                <a
+                  href="tel:0790870596"
+                  className="font-sans text-base sm:text-lg font-normal text-foreground/90 hover:text-primary transition-colors underline decoration-primary/40 underline-offset-4 flex items-center gap-2"
+                >
+                  <Phone className="w-4 h-4 text-primary shrink-0" />
+                  <span>0790870596</span>
+                </a>
+              </div>
+
+              <div className="pt-2">
+                <SocialLinks />
+              </div>
+            </div>
           </div>
 
-          {/* Navigation Columns */}
+          {/* Right Navigation Columns */}
           <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4">
             {/* Explore Column */}
             <div className="space-y-4">
-              <h3 className="font-display text-sm tracking-widest text-muted-foreground uppercase">
+              <h3 className="font-display text-sm tracking-widest text-muted-foreground uppercase font-bold">
                 Explore
               </h3>
               <ul className="space-y-2">
@@ -59,7 +84,7 @@ export default function Footer() {
 
             {/* Utilities Column */}
             <div className="space-y-4">
-              <h3 className="font-display text-sm tracking-widest text-muted-foreground uppercase">
+              <h3 className="font-display text-sm tracking-widest text-muted-foreground uppercase font-bold">
                 Services & Contact
               </h3>
               <ul className="space-y-2">
@@ -79,43 +104,15 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Contact & Social Strip */}
-        <div className="pt-8 border-t border-surface-border grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          {/* Email Direct & Phone */}
-          <div className="md:col-span-7 space-y-3">
-            <span className="text-xs uppercase tracking-wider text-muted-foreground block font-medium">
-              Start a Conversation
-            </span>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
-              <a
-                href="mailto:stackupke@gmail.com"
-                className="font-display text-xl sm:text-2xl text-foreground hover:text-primary transition-colors underline decoration-primary/40 underline-offset-4 flex items-center gap-2"
-              >
-                <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span>stackupke@gmail.com</span>
-              </a>
-              <a
-                href="tel:0790870596"
-                className="font-display text-xl sm:text-2xl text-foreground hover:text-primary transition-colors underline decoration-primary/40 underline-offset-4 flex items-center gap-2"
-              >
-                <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span>0790870596</span>
-              </a>
-            </div>
-          </div>
-
-          {/* Social Icons */}
-          <div className="md:col-span-5 flex items-center md:justify-end">
-            <SocialLinks />
-          </div>
-        </div>
-
-        {/* Bottom Copyright Bar */}
+        {/* Bottom Copyright & Legal Link Bar */}
         <div className="pt-8 border-t border-surface-border flex flex-col sm:flex-row items-center justify-between text-xs text-muted-foreground gap-4">
-          <p>© {new Date().getFullYear()} Stackup Creative Agency. All rights reserved.</p>
-          <p className="font-medium text-foreground">
-            Nairobi, Kenya — Serving Global Brands
-          </p>
+          <p>© {new Date().getFullYear()} StackupKenya. All rights reserved.</p>
+          <Link
+            href="/privacy"
+            className="font-semibold text-foreground hover:text-primary transition-colors underline decoration-primary/40 underline-offset-4"
+          >
+            Privacy Policy & Legal Terms
+          </Link>
         </div>
       </div>
     </footer>
