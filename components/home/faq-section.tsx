@@ -57,7 +57,7 @@ export default function FAQSection() {
                       <span className="font-display text-lg text-primary font-medium">
                         {formattedNumber}
                       </span>
-                      <h3 className="font-display text-xl sm:text-2xl text-foreground uppercase tracking-tight group-hover:text-primary transition-colors">
+                      <h3 className="font-sans font-normal text-xl sm:text-2xl text-foreground uppercase tracking-tight group-hover:text-primary transition-colors">
                         {faq.question}
                       </h3>
                     </div>

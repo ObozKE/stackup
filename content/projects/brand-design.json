@@ -1,45 +1,93 @@
 [
   {
     "id": "brand-design-1",
-    "title": "Kazi Workspace Brand Identity",
-    "slug": "kazi-workspace-brand-identity",
+    "title": "Brand Design Project 01",
+    "slug": "brand-design-project-01",
     "category": "Brand Design",
     "subtitle": "Brand Identity & Design System",
-    "summary": "Complete brand overhaul and modern design system for a premier co-working brand.",
+    "summary": "Complete brand overhaul and modern design system.",
     "tags": ["Brand Design", "Typography", "Visual System"],
-    "image": "/images/projects/brand-design/brand-design-1.jpg",
-    "fallbackImage": "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop",
+    "image": "/images/projects/brand-design/b1.webp",
     "images": [
-      "/images/projects/brand-design/brand-design-1a.jpg",
-      "/images/projects/brand-design/brand-design-1b.jpg",
-      "/images/projects/brand-design/brand-design-1c.jpg"
-    ],
-    "fallbackImages": [
-      "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1542744094-3a31b272c490?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop"
+      "/images/projects/brand-design/b1.webp",
+      "/images/projects/brand-design/b1a.webp",
+      "/images/projects/brand-design/b1b.webp",
+      "/images/projects/brand-design/b1c.webp",
+      "/images/projects/brand-design/b1d.webp"
     ],
     "year": "2026"
   },
   {
     "id": "brand-design-2",
-    "title": "Urban Beats Festival Identity",
-    "slug": "urban-beats-festival-identity",
+    "title": "Brand Design Project 02",
+    "slug": "brand-design-project-02",
     "category": "Brand Design",
-    "medium": "Brand Artwork & Event Graphics",
-    "summary": "High-contrast visual design assets and promotional graphic flyers for a contemporary music event.",
-    "tags": ["Brand Artwork", "Event"],
-    "image": "/images/projects/brand-design/brand-design-2.jpg",
-    "fallbackImage": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1000&auto=format&fit=crop",
+    "medium": "Brand Artwork & Identity",
+    "summary": "High-contrast visual design assets and brand guidelines.",
+    "tags": ["Brand Artwork", "Identity"],
+    "image": "/images/projects/brand-design/b2.webp",
     "images": [
-      "/images/projects/brand-design/brand-design-2a.jpg",
-      "/images/projects/brand-design/brand-design-2b.jpg",
-      "/images/projects/brand-design/brand-design-2c.jpg"
-    ],
-    "fallbackImages": [
-      "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1000&auto=format&fit=crop"
+      "/images/projects/brand-design/b2.webp",
+      "/images/projects/brand-design/b2a.webp",
+      "/images/projects/brand-design/b2b.webp",
+      "/images/projects/brand-design/b2c.webp"
+    ]
+  },
+  {
+    "id": "brand-design-3",
+    "title": "Brand Design Project 03",
+    "slug": "brand-design-project-03",
+    "category": "Brand Design",
+    "medium": "Visual Identity",
+    "summary": "Custom brand system and stationery design.",
+    "tags": ["Visual System", "Identity"],
+    "image": "/images/projects/brand-design/b3.webp",
+    "images": [
+      "/images/projects/brand-design/b3.webp",
+      "/images/projects/brand-design/b3a.webp",
+      "/images/projects/brand-design/b3b.webp"
+    ]
+  },
+  {
+    "id": "brand-design-4",
+    "title": "Brand Design Project 04",
+    "slug": "brand-design-project-04",
+    "category": "Brand Design",
+    "medium": "Logo & Brand Mark",
+    "summary": "Modern logomark and brand identity system.",
+    "tags": ["Logo", "Brand Mark"],
+    "image": "/images/projects/brand-design/b4.webp",
+    "images": [
+      "/images/projects/brand-design/b4.webp",
+      "/images/projects/brand-design/b4a.webp"
+    ]
+  },
+  {
+    "id": "brand-design-5",
+    "title": "Brand Design Project 05",
+    "slug": "brand-design-project-05",
+    "category": "Brand Design",
+    "medium": "Brand Guidelines",
+    "summary": "Comprehensive brand guidelines and corporate design system.",
+    "tags": ["Guidelines", "Corporate"],
+    "image": "/images/projects/brand-design/b5.webp",
+    "images": [
+      "/images/projects/brand-design/b5.webp",
+      "/images/projects/brand-design/b5a.webp"
+    ]
+  },
+  {
+    "id": "brand-design-6",
+    "title": "Brand Design Project 06",
+    "slug": "brand-design-project-06",
+    "category": "Brand Design",
+    "medium": "Brand Identity Package",
+    "summary": "Full service brand identity package.",
+    "tags": ["Identity", "Branding"],
+    "image": "/images/projects/brand-design/b6.webp",
+    "images": [
+      "/images/projects/brand-design/b6.webp",
+      "/images/projects/brand-design/b6a.webp"
     ]
   }
 ]

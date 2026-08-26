@@ -1,138 +1,294 @@
 [
   {
     "id": "web-dev-1",
-    "title": "Nairobi Fintech Platform",
-    "slug": "nairobi-fintech-platform",
+    "title": "Huru Web Project",
+    "slug": "huru-web-project",
     "category": "Web Development",
     "subtitle": "Next.js Web Application",
-    "summary": "Full-stack payment dashboard engineered for seamless high-volume transaction tracking.",
-    "tags": ["Next.js", "React", "Fintech", "UI/UX"],
-    "image": "/images/projects/web-development/web-dev-1.jpg",
-    "fallbackImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+    "summary": "Full-stack web application engineered for Huru.",
+    "tags": ["Next.js", "React", "Web App"],
+    "image": "/images/projects/web-development/p1.webp",
     "year": "2026",
-    "websiteUrl": "https://stackup.co.ke"
+    "websiteUrl": "https://huru-red.vercel.app/"
   },
   {
     "id": "web-dev-2",
-    "title": "AfriCraft E-Commerce Experience",
-    "slug": "africraft-ecommerce-experience",
+    "title": "Moto Moto Grill",
+    "slug": "moto-moto-grill",
     "category": "Web Development",
-    "subtitle": "Headless E-Commerce Store",
-    "summary": "Custom online storefront designed with lightning-fast page speeds and intuitive checkout flow.",
+    "subtitle": "Restaurant & Culinary Storefront",
+    "summary": "Custom web application engineered for Moto Moto Grill.",
     "tags": ["E-commerce", "Next.js", "Tailwind CSS"],
-    "image": "/images/projects/web-development/web-dev-2.jpg",
-    "fallbackImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
-    "year": "2025",
-    "websiteUrl": "https://stackup.co.ke"
+    "image": "/images/projects/web-development/p2.webp",
+    "year": "2026",
+    "websiteUrl": "https://motomotogrill-six.vercel.app/"
+  },
+  {
+    "id": "web-dev-3",
+    "title": "Baharini Web Platform",
+    "slug": "baharini-web-platform",
+    "category": "Web Development",
+    "subtitle": "Modern Web Platform",
+    "summary": "High-performance digital platform built for Baharini.",
+    "tags": ["Web Development", "UI/UX", "Next.js"],
+    "image": "/images/projects/web-development/p3.webp",
+    "year": "2026",
+    "websiteUrl": "https://baharini.vercel.app/"
+  },
+  {
+    "id": "web-dev-4",
+    "title": "HTK Platform",
+    "slug": "htk-platform",
+    "category": "Web Development",
+    "subtitle": "Enterprise Web Platform",
+    "summary": "Interactive web interface engineered for HTK.",
+    "tags": ["Web App", "React", "Tailwind"],
+    "image": "/images/projects/web-development/p4.webp",
+    "year": "2026",
+    "websiteUrl": "https://htk-seven.vercel.app/"
+  },
+  {
+    "id": "web-dev-5",
+    "title": "Oboz Creations",
+    "slug": "oboz-creations",
+    "category": "Web Development",
+    "subtitle": "Creative Digital Studio",
+    "summary": "Custom web application engineered for Oboz Creations.",
+    "tags": ["Creative Studio", "Next.js"],
+    "image": "/images/projects/web-development/p5.webp",
+    "year": "2026",
+    "websiteUrl": "https://obozcreations.me/"
   },
   {
     "id": "brand-design-1",
-    "title": "Kazi Workspace Brand Identity",
-    "slug": "kazi-workspace-brand-identity",
+    "title": "Brand Design Project 01",
+    "slug": "brand-design-project-01",
     "category": "Brand Design",
     "subtitle": "Brand Identity & Design System",
-    "summary": "Complete brand overhaul and modern design system for a premier co-working brand.",
+    "summary": "Complete brand overhaul and modern design system.",
     "tags": ["Brand Design", "Typography", "Visual System"],
-    "image": "/images/projects/brand-design/brand-design-1.jpg",
-    "fallbackImage": "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop",
+    "image": "/images/projects/brand-design/b1.webp",
     "images": [
-      "/images/projects/brand-design/brand-design-1a.jpg",
-      "/images/projects/brand-design/brand-design-1b.jpg",
-      "/images/projects/brand-design/brand-design-1c.jpg"
-    ],
-    "fallbackImages": [
-      "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1542744094-3a31b272c490?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop"
+      "/images/projects/brand-design/b1.webp",
+      "/images/projects/brand-design/b1a.webp",
+      "/images/projects/brand-design/b1b.webp",
+      "/images/projects/brand-design/b1c.webp",
+      "/images/projects/brand-design/b1d.webp"
     ],
     "year": "2026"
   },
   {
     "id": "brand-design-2",
-    "title": "Urban Beats Festival Identity",
-    "slug": "urban-beats-festival-identity",
+    "title": "Brand Design Project 02",
+    "slug": "brand-design-project-02",
     "category": "Brand Design",
-    "medium": "Brand Artwork & Event Graphics",
-    "summary": "High-contrast visual design assets and promotional graphic flyers for a contemporary music event.",
-    "tags": ["Brand Artwork", "Event"],
-    "image": "/images/projects/brand-design/brand-design-2.jpg",
-    "fallbackImage": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1000&auto=format&fit=crop",
+    "medium": "Brand Artwork & Identity",
+    "summary": "High-contrast visual design assets and brand guidelines.",
+    "tags": ["Brand Artwork", "Identity"],
+    "image": "/images/projects/brand-design/b2.webp",
     "images": [
-      "/images/projects/brand-design/brand-design-2a.jpg",
-      "/images/projects/brand-design/brand-design-2b.jpg",
-      "/images/projects/brand-design/brand-design-2c.jpg"
-    ],
-    "fallbackImages": [
-      "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1000&auto=format&fit=crop"
+      "/images/projects/brand-design/b2.webp",
+      "/images/projects/brand-design/b2a.webp",
+      "/images/projects/brand-design/b2b.webp",
+      "/images/projects/brand-design/b2c.webp"
+    ]
+  },
+  {
+    "id": "brand-design-3",
+    "title": "Brand Design Project 03",
+    "slug": "brand-design-project-03",
+    "category": "Brand Design",
+    "medium": "Visual Identity",
+    "summary": "Custom brand system and stationery design.",
+    "tags": ["Visual System", "Identity"],
+    "image": "/images/projects/brand-design/b3.webp",
+    "images": [
+      "/images/projects/brand-design/b3.webp",
+      "/images/projects/brand-design/b3a.webp",
+      "/images/projects/brand-design/b3b.webp"
+    ]
+  },
+  {
+    "id": "brand-design-4",
+    "title": "Brand Design Project 04",
+    "slug": "brand-design-project-04",
+    "category": "Brand Design",
+    "medium": "Logo & Brand Mark",
+    "summary": "Modern logomark and brand identity system.",
+    "tags": ["Logo", "Brand Mark"],
+    "image": "/images/projects/brand-design/b4.webp",
+    "images": [
+      "/images/projects/brand-design/b4.webp",
+      "/images/projects/brand-design/b4a.webp"
+    ]
+  },
+  {
+    "id": "brand-design-5",
+    "title": "Brand Design Project 05",
+    "slug": "brand-design-project-05",
+    "category": "Brand Design",
+    "medium": "Brand Guidelines",
+    "summary": "Comprehensive brand guidelines and corporate design system.",
+    "tags": ["Guidelines", "Corporate"],
+    "image": "/images/projects/brand-design/b5.webp",
+    "images": [
+      "/images/projects/brand-design/b5.webp",
+      "/images/projects/brand-design/b5a.webp"
+    ]
+  },
+  {
+    "id": "brand-design-6",
+    "title": "Brand Design Project 06",
+    "slug": "brand-design-project-06",
+    "category": "Brand Design",
+    "medium": "Brand Identity Package",
+    "summary": "Full service brand identity package.",
+    "tags": ["Identity", "Branding"],
+    "image": "/images/projects/brand-design/b6.webp",
+    "images": [
+      "/images/projects/brand-design/b6.webp",
+      "/images/projects/brand-design/b6a.webp"
     ]
   },
   {
     "id": "smm-1",
-    "title": "Savanna Digital Campaign",
-    "slug": "savanna-digital-campaign",
+    "title": "Social Media Campaign 01",
+    "slug": "social-media-campaign-01",
     "category": "Social Media Management",
     "subtitle": "Multi-Channel Social Campaign",
-    "summary": "Content strategy and targeted social media ads delivering 3x audience engagement boost.",
+    "summary": "Content strategy and targeted social media campaign.",
     "tags": ["Campaigns", "Content Creation", "Analytics"],
-    "image": "/images/projects/social-media-management/smm-1.jpg",
-    "fallbackImage": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop",
-    "year": "2025"
+    "image": "/images/projects/social-media-management/s1.webp",
+    "year": "2026"
   },
   {
     "id": "smm-2",
-    "title": "Sonic Waves Social Media Asset Pack",
-    "slug": "sonic-waves-social-pack",
+    "title": "Social Media Campaign 02",
+    "slug": "social-media-campaign-02",
     "category": "Social Media Management",
     "medium": "Digital Graphic Assets",
-    "summary": "Custom digital carousel templates and story graphics tailored for high-engagement Instagram channels.",
+    "summary": "Custom digital carousel templates and story graphics.",
     "tags": ["Social Assets", "Digital"],
-    "image": "/images/projects/social-media-management/smm-2.jpg",
-    "fallbackImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop"
+    "image": "/images/projects/social-media-management/s2.webp"
+  },
+  {
+    "id": "smm-3",
+    "title": "Social Media Campaign 03",
+    "slug": "social-media-campaign-03",
+    "category": "Social Media Management",
+    "medium": "Instagram Feed Artwork",
+    "summary": "High-engagement social channel assets.",
+    "tags": ["Instagram", "Social Media"],
+    "image": "/images/projects/social-media-management/s3.webp"
+  },
+  {
+    "id": "smm-4",
+    "title": "Social Media Campaign 04",
+    "slug": "social-media-campaign-04",
+    "category": "Social Media Management",
+    "medium": "Digital Campaign Graphics",
+    "summary": "Targeted marketing collateral and promo assets.",
+    "tags": ["Campaigns", "Digital"],
+    "image": "/images/projects/social-media-management/s4.webp"
+  },
+  {
+    "id": "smm-5",
+    "title": "Social Media Campaign 05",
+    "slug": "social-media-campaign-05",
+    "category": "Social Media Management",
+    "medium": "Story Graphics & Carousels",
+    "summary": "Creative story templates and visual assets.",
+    "tags": ["Stories", "Design"],
+    "image": "/images/projects/social-media-management/s5.webp"
+  },
+  {
+    "id": "smm-6",
+    "title": "Social Media Campaign 06",
+    "slug": "social-media-campaign-06",
+    "category": "Social Media Management",
+    "medium": "Brand Channel Artwork",
+    "summary": "Full social media management content package.",
+    "tags": ["Social Media", "Branding"],
+    "image": "/images/projects/social-media-management/s6.webp"
   },
   {
     "id": "graphic-design-1",
-    "title": "Minimalist Poster Series — Boldway",
-    "slug": "minimalist-poster-series",
+    "title": "Graphic Design Work 01",
+    "slug": "graphic-design-work-01",
     "category": "Graphic Design",
     "medium": "Print Poster / Graphic Design",
-    "summary": "Experimental typography poster campaign exploring heavy grotesque font pairings and geometric contrasts.",
+    "summary": "Experimental visual artwork and typography design.",
     "tags": ["Graphic Design", "Poster", "Typography"],
-    "image": "/images/projects/graphic-design/graphic-design-1.jpg",
-    "fallbackImage": "https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=1000&auto=format&fit=crop"
+    "image": "/images/projects/graphic-design/g1.webp"
   },
   {
     "id": "graphic-design-2",
-    "title": "Botanica Packaging Mockup",
-    "slug": "botanica-packaging-mockup",
+    "title": "Graphic Design Work 02",
+    "slug": "graphic-design-work-02",
     "category": "Graphic Design",
     "medium": "Package & Label Graphic Design",
-    "summary": "Modern packaging artwork utilizing organic color swatches and clean typographic structures.",
+    "summary": "Modern branding collateral and package layout artwork.",
     "tags": ["Packaging", "Print"],
-    "image": "/images/projects/graphic-design/graphic-design-2.jpg",
-    "fallbackImage": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=1000&auto=format&fit=crop"
+    "image": "/images/projects/graphic-design/g2.webp"
   },
   {
     "id": "graphic-design-3",
-    "title": "Contemporary Exhibition Catalog",
-    "slug": "contemporary-exhibition-catalog",
+    "title": "Graphic Design Work 03",
+    "slug": "graphic-design-work-03",
     "category": "Graphic Design",
     "medium": "Editorial & Print Layout",
-    "summary": "Minimal editorial design and editorial layout for a Nairobi art showcase.",
+    "summary": "Minimal editorial design and publication layout.",
     "tags": ["Editorial", "Print"],
-    "image": "/images/projects/graphic-design/graphic-design-3.jpg",
-    "fallbackImage": "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1000&auto=format&fit=crop"
+    "image": "/images/projects/graphic-design/g3.webp"
   },
   {
     "id": "graphic-design-4",
-    "title": "Vanguard Typography Billboard",
-    "slug": "vanguard-typography-billboard",
+    "title": "Graphic Design Work 04",
+    "slug": "graphic-design-work-04",
     "category": "Graphic Design",
     "medium": "Out-of-Home Billboard Artwork",
-    "summary": "Large scale outdoor graphic design layout utilizing Stackup's signature high-contrast display typography.",
+    "summary": "Large scale outdoor graphic design visual artwork.",
     "tags": ["Billboard", "OOH"],
-    "image": "/images/projects/graphic-design/graphic-design-4.jpg",
-    "fallbackImage": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=1000&auto=format&fit=crop"
+    "image": "/images/projects/graphic-design/g4.webp"
+  },
+  {
+    "id": "graphic-design-5",
+    "title": "Graphic Design Work 05",
+    "slug": "graphic-design-work-05",
+    "category": "Graphic Design",
+    "medium": "Digital Graphic Artwork",
+    "summary": "Custom digital graphic artwork and visual assets.",
+    "tags": ["Digital", "Graphic Design"],
+    "image": "/images/projects/graphic-design/g5.webp"
+  },
+  {
+    "id": "graphic-design-6",
+    "title": "Graphic Design Work 06",
+    "slug": "graphic-design-work-06",
+    "category": "Graphic Design",
+    "medium": "Brand Artwork",
+    "summary": "High-contrast visual design collateral.",
+    "tags": ["Brand Artwork", "Design"],
+    "image": "/images/projects/graphic-design/g6.webp"
+  },
+  {
+    "id": "graphic-design-7",
+    "title": "Graphic Design Work 07",
+    "slug": "graphic-design-work-07",
+    "category": "Graphic Design",
+    "medium": "Visual System",
+    "summary": "High-impact typography and poster layout artwork.",
+    "tags": ["Graphic Design", "Typography"],
+    "image": "/images/projects/graphic-design/g7.webp"
+  },
+  {
+    "id": "graphic-design-8",
+    "title": "Graphic Design Work 08",
+    "slug": "graphic-design-work-08",
+    "category": "Graphic Design",
+    "medium": "Creative Poster",
+    "summary": "Creative design and publication artwork.",
+    "tags": ["Design", "Poster"],
+    "image": "/images/projects/graphic-design/g8.webp"
   }
 ]

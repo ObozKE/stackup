@@ -43,6 +43,9 @@ export default function ProjectFilter({ projects }: ProjectFilterProps) {
     setImgErrors((prev) => ({ ...prev, [id]: true }));
   };
 
+  // Determine if any visible projects exist for current category
+  const visibleProjects = filteredProjects.filter((p) => !imgErrors[p.id]);
+
   return (
     <div className="space-y-12">
       {/* Category Filter Tabs */}
@@ -66,51 +69,68 @@ export default function ProjectFilter({ projects }: ProjectFilterProps) {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredProjects.map((project) => {
-          const isBrandDesign = project.category === "Brand Design";
-          const isWebDev = project.category === "Web Development";
-          const targetUrl = project.websiteUrl || `/contact?service=${encodeURIComponent(project.category)}`;
+      {visibleProjects.length === 0 ? (
+        <div className="text-center py-16 bg-surface/50 border border-surface-border rounded-[24px] max-w-md mx-auto p-8 space-y-2">
+          <p className="text-sm font-medium text-foreground uppercase tracking-wider">
+            No Images Uploaded Yet
+          </p>
+          <p className="text-xs text-muted-foreground">
+            Save your project images into the project folder to display them here.
+          </p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.map((project) => {
+            // Hide card if image failed to load (file not uploaded to disk yet)
+            if (imgErrors[project.id]) {
+              return null;
+            }
 
-          if (isBrandDesign) {
-            return <BrandCarouselCard key={project.id} project={project} />;
-          }
+            const isBrandDesign = project.category === "Brand Design";
+            const isWebDev = project.category === "Web Development";
+            const isFullFit =
+              project.category === "Graphic Design" ||
+              project.category === "Social Media Management";
+            const targetUrl = project.websiteUrl || `/contact?service=${encodeURIComponent(project.category)}`;
 
-          const imageSrc =
-            imgErrors[project.id] && project.fallbackImage
-              ? project.fallbackImage
-              : project.image;
+            if (isBrandDesign) {
+              return (
+                <BrandCarouselCard
+                  key={project.id}
+                  project={project}
+                  onCardError={handleImageError}
+                />
+              );
+            }
 
-          return (
-            <a
-              key={project.id}
-              href={targetUrl}
-              target={isWebDev && project.websiteUrl ? "_blank" : "_self"}
-              rel="noopener noreferrer"
-              className="w-full aspect-[16/10] sm:aspect-[4/3] rounded-[24px] overflow-hidden relative group border border-surface-border shadow-2xs bg-surface"
-            >
-              {/* Background Image */}
-              <Image
-                src={imageSrc}
-                alt={project.title || project.category}
-                fill
-                className="object-cover"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                onError={() => handleImageError(project.id)}
-              />
-
-              {/* Category Label Overlay ONLY for Web Development */}
-              {isWebDev && (
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
-                  <span className="text-xs text-white/80 uppercase tracking-widest block font-medium">
-                    {project.category}
-                  </span>
-                </div>
-              )}
-            </a>
-          );
-        })}
-      </div>
+            return (
+              <a
+                key={project.id}
+                href={targetUrl}
+                target={isWebDev && project.websiteUrl ? "_blank" : "_self"}
+                rel="noopener noreferrer"
+                className={`w-full ${
+                  isFullFit
+                    ? "aspect-[3/4] bg-surface/90"
+                    : "aspect-[16/10] sm:aspect-[4/3] bg-surface"
+                } rounded-[24px] overflow-hidden relative group border border-surface-border shadow-2xs flex items-center justify-center`}
+              >
+                {/* Background Image */}
+                <Image
+                  src={project.image}
+                  alt={project.title || project.category}
+                  fill
+                  className={`${
+                    isFullFit ? "object-contain p-2 sm:p-3" : "object-cover"
+                  } group-hover:scale-105 transition-transform duration-500`}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  onError={() => handleImageError(project.id)}
+                />
+              </a>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }

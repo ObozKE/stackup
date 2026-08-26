@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <>
-      {/* Header */}
-      <section className="py-20 bg-background border-b border-surface-border">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      {/* Header with Greyish Surface Background */}
+      <section className="py-20 bg-surface/70 border-b border-surface-border">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           <Link
             href="/"
             className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground font-semibold hover:text-primary transition-colors"
@@ -22,12 +22,12 @@ export default function PrivacyPolicyPage() {
             <ArrowLeft className="w-4 h-4" />
             <span>Return to Homepage</span>
           </Link>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface border border-surface-border text-xs font-semibold uppercase tracking-widest text-foreground">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-background border border-surface-border text-xs font-semibold uppercase tracking-widest text-foreground">
             <ShieldCheck className="w-4 h-4 text-primary" />
             <span>• Legal & Privacy •</span>
           </div>
           <h1 className="font-display text-4xl sm:text-6xl uppercase tracking-tight text-foreground">
-            PRIVACY POLICY & LEGAL TERMS
+            LEGAL & PRIVACY.
           </h1>
           <p className="text-sm text-muted-foreground font-sans">
             Last Updated: August 2026 • Governed by the Laws of Kenya

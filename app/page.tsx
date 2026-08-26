@@ -24,7 +24,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-surface-border gap-6">
             <div>
-              <span className="text-xs uppercase tracking-widest text-primary font-bold block mb-2">
+              <span className="text-xs uppercase tracking-widest text-primary font-medium block mb-2">
                 • Thought Leadership •
               </span>
               <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase text-foreground">
@@ -33,7 +33,7 @@ export default function Home() {
             </div>
             <Link
               href="/insights"
-              className="inline-flex items-center gap-2 text-sm font-bold text-foreground hover:text-primary transition-colors group"
+              className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors group"
             >
               <span>View All Articles</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -61,15 +61,15 @@ export default function Home() {
                 </div>
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                   <div className="space-y-3">
-                    <div className="flex items-center gap-3 text-xs font-semibold text-muted-foreground">
+                    <div className="flex items-center gap-3 text-xs font-normal text-muted-foreground">
                       <span>{article.date}</span>
                     </div>
-                    <h3 className="font-display text-xl sm:text-2xl text-foreground uppercase tracking-tight line-clamp-2 group-hover:text-primary transition-colors">
+                    <h3 className="font-sans font-normal text-xl sm:text-2xl text-foreground uppercase tracking-tight line-clamp-2 group-hover:text-primary transition-colors">
                       {article.title}
                     </h3>
                   </div>
                   <div className="pt-2">
-                    <span className="text-xs font-bold text-foreground group-hover:text-primary transition-colors inline-flex items-center gap-1">
+                    <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors inline-flex items-center gap-1">
                       Read Article <ArrowUpRight className="w-3 h-3" />
                     </span>
                   </div>

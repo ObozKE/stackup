@@ -13,14 +13,14 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      {/* Header */}
-      <section className="py-20 bg-background border-b border-surface-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface border border-surface-border text-xs font-semibold uppercase tracking-widest text-foreground">
+      {/* Header with Greyish Surface Background */}
+      <section className="py-20 bg-surface/70 border-b border-surface-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-background border border-surface-border text-xs font-semibold uppercase tracking-widest text-foreground">
             <span>• Get In Touch •</span>
           </div>
           <h1 className="font-display text-5xl sm:text-7xl md:text-8xl uppercase tracking-tighter text-foreground max-w-4xl">
-            LET&apos;S TALK ABOUT YOUR NEXT PROJECT.
+            CONTACT US.
           </h1>
         </div>
       </section>

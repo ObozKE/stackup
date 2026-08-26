@@ -13,18 +13,15 @@ export const metadata: Metadata = {
 export default function InsightsPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="py-20 bg-background border-b border-surface-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface border border-surface-border text-xs font-semibold uppercase tracking-widest text-foreground">
+      {/* Hero with Greyish Surface Background */}
+      <section className="py-20 bg-surface/70 border-b border-surface-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-background border border-surface-border text-xs font-medium uppercase tracking-widest text-foreground">
             <span>• Thought Leadership •</span>
           </div>
           <h1 className="font-display text-5xl sm:text-7xl md:text-8xl uppercase tracking-tighter text-foreground max-w-4xl">
-            INSIGHTS & PERSPECTIVES.
+            INSIGHTS.
           </h1>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl font-sans leading-relaxed">
-            Articles, strategy deep dives, and technical guides covering web engineering, high-contrast visual design, and social marketing trends.
-          </p>
         </div>
       </section>
 
@@ -52,19 +49,19 @@ export default function InsightsPage() {
 
                 <div className="p-8 flex-1 flex flex-col justify-between space-y-6">
                   <div className="space-y-3">
-                    <div className="flex items-center gap-3 text-xs font-semibold text-muted-foreground">
+                    <div className="flex items-center gap-3 text-xs font-normal text-muted-foreground">
                       <span>{article.readTime}</span>
                       <span>•</span>
                       <span>{article.date}</span>
                     </div>
 
-                    <h2 className="font-display text-2xl sm:text-3xl text-foreground uppercase tracking-tight group-hover:text-primary transition-colors">
+                    <h2 className="font-sans font-normal text-2xl sm:text-3xl text-foreground uppercase tracking-tight group-hover:text-primary transition-colors">
                       {article.title}
                     </h2>
                   </div>
 
                   <div className="pt-4 border-t border-surface-border flex items-center justify-between">
-                    <span className="text-xs font-bold text-foreground group-hover:text-primary transition-colors inline-flex items-center gap-1">
+                    <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors inline-flex items-center gap-1">
                       Read Story <ArrowUpRight className="w-3.5 h-3.5" />
                     </span>
                   </div>

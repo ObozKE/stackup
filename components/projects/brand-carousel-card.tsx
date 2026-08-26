@@ -10,20 +10,42 @@ interface BrandCarouselCardProps {
     title: string;
     category: string;
     image: string;
-    fallbackImage?: string;
     images?: string[];
-    fallbackImages?: string[];
   };
+  onCardError?: (id: string) => void;
 }
 
-export default function BrandCarouselCard({ project }: BrandCarouselCardProps) {
-  const primaryImages = project.images && project.images.length > 0 ? project.images : [project.image];
-  const fallbacks = project.fallbackImages && project.fallbackImages.length > 0 ? project.fallbackImages : [project.fallbackImage || project.image];
+export default function BrandCarouselCard({ project, onCardError }: BrandCarouselCardProps) {
+  // Use images array if provided, otherwise default to single image
+  const rawImages = project.images && project.images.length > 0 ? project.images : [project.image];
 
+  const [failedIndices, setFailedIndices] = useState<Set<number>>(new Set());
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [failedIndices, setFailedIndices] = useState<Record<number, boolean>>({});
 
-  const totalSlides = primaryImages.length;
+  // Filter out any image indices that failed to load (e.g. file not uploaded to disk yet)
+  const validImages = rawImages.filter((_, idx) => !failedIndices.has(idx));
+  const totalSlides = validImages.length;
+
+  const handleImageError = (originalIndex: number) => {
+    setFailedIndices((prev) => {
+      const next = new Set(prev);
+      next.add(originalIndex);
+      if (next.size === rawImages.length) {
+        onCardError?.(project.id);
+      }
+      return next;
+    });
+  };
+
+  // If no valid images exist yet, return null (card hides until image is uploaded)
+  if (totalSlides === 0) {
+    return null;
+  }
+
+  // Ensure current index is within bounds of validImages
+  const safeIndex = currentIndex % totalSlides;
+  const currentSrc = validImages[safeIndex];
+  const originalIndexInRaw = rawImages.indexOf(currentSrc);
 
   const prevSlide = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -37,31 +59,23 @@ export default function BrandCarouselCard({ project }: BrandCarouselCardProps) {
     setCurrentIndex((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
   };
 
-  const handleImageError = (index: number) => {
-    setFailedIndices((prev) => ({ ...prev, [index]: true }));
-  };
-
-  const currentSrc = failedIndices[currentIndex]
-    ? fallbacks[currentIndex] || fallbacks[0] || project.fallbackImage || project.image
-    : primaryImages[currentIndex];
-
   return (
-    <div className="w-full aspect-[16/10] sm:aspect-[4/3] rounded-[24px] overflow-hidden relative group border border-surface-border shadow-2xs bg-surface select-none">
+    <div className="w-full aspect-[3/4] rounded-[24px] overflow-hidden relative group border border-surface-border shadow-2xs bg-surface/90 flex items-center justify-center select-none">
       {/* Background Image Carousel Slide */}
       <Image
-        key={currentIndex}
+        key={currentSrc}
         src={currentSrc}
-        alt={`${project.title} slide ${currentIndex + 1}`}
+        alt={`${project.title} slide ${safeIndex + 1}`}
         fill
-        className="object-cover transition-opacity duration-300"
+        className="object-contain p-2 sm:p-3 transition-opacity duration-300"
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        onError={() => handleImageError(currentIndex)}
+        onError={() => handleImageError(originalIndexInRaw >= 0 ? originalIndexInRaw : safeIndex)}
       />
 
-      {/* Slide Count Badge (e.g. 1 / 3) */}
+      {/* Slide Count Badge (e.g. 1 / N) */}
       {totalSlides > 1 && (
         <div className="absolute top-4 right-4 z-10 bg-black/60 backdrop-blur-md text-white text-[11px] font-bold px-2.5 py-1 rounded-full border border-white/20">
-          {currentIndex + 1} / {totalSlides}
+          {safeIndex + 1} / {totalSlides}
         </div>
       )}
 
@@ -88,7 +102,7 @@ export default function BrandCarouselCard({ project }: BrandCarouselCardProps) {
       {/* Slide Pagination Dots */}
       {totalSlides > 1 && (
         <div className="absolute bottom-4 inset-x-0 z-10 flex items-center justify-center gap-1.5">
-          {primaryImages.map((_, idx) => (
+          {validImages.map((_, idx) => (
             <button
               key={idx}
               onClick={(e) => {
@@ -97,7 +111,7 @@ export default function BrandCarouselCard({ project }: BrandCarouselCardProps) {
                 setCurrentIndex(idx);
               }}
               className={`h-1.5 rounded-full transition-all duration-300 ${
-                idx === currentIndex
+                idx === safeIndex
                   ? "w-6 bg-primary"
                   : "w-1.5 bg-white/50 hover:bg-white/80"
               }`}

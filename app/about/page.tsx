@@ -40,18 +40,15 @@ export default function AboutPage() {
 
   return (
     <>
-      {/* About Hero Header */}
-      <section className="py-20 bg-background border-b border-surface-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface border border-surface-border text-xs font-semibold uppercase tracking-widest text-foreground">
+      {/* About Hero Header with Greyish Surface Background */}
+      <section className="py-20 bg-surface/70 border-b border-surface-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-background border border-surface-border text-xs font-semibold uppercase tracking-widest text-foreground">
             <span>• Studio Intro •</span>
           </div>
           <h1 className="font-display text-5xl sm:text-7xl md:text-8xl uppercase tracking-tighter text-foreground max-w-4xl">
-            WE ARE STACKUP. CREATIVE AGENCY NAIROBI.
+            ABOUT STACKUP.
           </h1>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl font-sans leading-relaxed">
-            A specialized creative team engineering digital products, visual identity systems, and marketing campaigns for forward-thinking brands in Nairobi, Kenya and beyond.
-          </p>
         </div>
       </section>
 

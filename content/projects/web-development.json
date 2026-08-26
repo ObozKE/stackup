@@ -1,28 +1,67 @@
 [
   {
     "id": "web-dev-1",
-    "title": "Nairobi Fintech Platform",
-    "slug": "nairobi-fintech-platform",
+    "title": "Huru Web Project",
+    "slug": "huru-web-project",
     "category": "Web Development",
     "subtitle": "Next.js Web Application",
-    "summary": "Full-stack payment dashboard engineered for seamless high-volume transaction tracking.",
-    "tags": ["Next.js", "React", "Fintech", "UI/UX"],
-    "image": "/images/projects/web-development/web-dev-1.jpg",
+    "summary": "Full-stack web application engineered for Huru.",
+    "tags": ["Next.js", "React", "Web App"],
+    "image": "/images/projects/web-development/p1.webp",
     "fallbackImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
     "year": "2026",
-    "websiteUrl": "https://stackup.co.ke"
+    "websiteUrl": "https://huru-red.vercel.app/"
   },
   {
     "id": "web-dev-2",
-    "title": "AfriCraft E-Commerce Experience",
-    "slug": "africraft-ecommerce-experience",
+    "title": "Moto Moto Grill",
+    "slug": "moto-moto-grill",
     "category": "Web Development",
-    "subtitle": "Headless E-Commerce Store",
-    "summary": "Custom online storefront designed with lightning-fast page speeds and intuitive checkout flow.",
+    "subtitle": "Restaurant & Culinary Storefront",
+    "summary": "Custom web application engineered for Moto Moto Grill.",
     "tags": ["E-commerce", "Next.js", "Tailwind CSS"],
-    "image": "/images/projects/web-development/web-dev-2.jpg",
+    "image": "/images/projects/web-development/p2.webp",
     "fallbackImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
-    "year": "2025",
-    "websiteUrl": "https://stackup.co.ke"
+    "year": "2026",
+    "websiteUrl": "https://motomotogrill-six.vercel.app/"
+  },
+  {
+    "id": "web-dev-3",
+    "title": "Baharini Web Platform",
+    "slug": "baharini-web-platform",
+    "category": "Web Development",
+    "subtitle": "Modern Web Platform",
+    "summary": "High-performance digital platform built for Baharini.",
+    "tags": ["Web Development", "UI/UX", "Next.js"],
+    "image": "/images/projects/web-development/p3.webp",
+    "fallbackImage": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop",
+    "year": "2026",
+    "websiteUrl": "https://baharini.vercel.app/"
+  },
+  {
+    "id": "web-dev-4",
+    "title": "HTK Platform",
+    "slug": "htk-platform",
+    "category": "Web Development",
+    "subtitle": "Enterprise Web Platform",
+    "summary": "Interactive web interface engineered for HTK.",
+    "tags": ["Web App", "React", "Tailwind"],
+    "image": "/images/projects/web-development/p4.webp",
+    "fallbackImage": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1200&auto=format&fit=crop",
+    "year": "2026",
+    "websiteUrl": "https://htk-seven.vercel.app/"
+  },
+  {
+    "id": "web-dev-5",
+    "title": "Oboz Creations",
+    "slug": "oboz-creations",
+    "category": "Web Development",
+    "subtitle": "Creative Digital Studio",
+    "summary": "Custom web application engineered for Oboz Creations.",
+    "tags": ["Creative Studio", "Next.js"],
+    "image": "/images/projects/web-development/p5.webp",
+    "fallbackImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+    "year": "2026",
+    "websiteUrl": "https://obozcreations.me/"
   }
 ]
