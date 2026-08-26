@@ -28,10 +28,10 @@ export default function OurWorkShowcase() {
   return (
     <section className="py-24 bg-background border-t border-surface-border overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Standard Section Header matching all other homepage sections */}
+        {/* Standard Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-surface-border gap-6">
           <div>
-            <span className="text-xs uppercase tracking-widest text-primary font-bold block mb-2">
+            <span className="text-xs uppercase tracking-widest text-primary font-medium block mb-2">
               • Portfolio Showcase •
             </span>
             <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase text-foreground">
@@ -60,7 +60,7 @@ export default function OurWorkShowcase() {
 
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 text-sm font-bold text-foreground hover:text-primary transition-colors group"
+              className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors group"
             >
               <span>View All Projects</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -95,7 +95,7 @@ export default function OurWorkShowcase() {
 
                 {/* Only Category Label Remaining */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
-                  <span className="text-xs text-white/80 uppercase tracking-widest block font-semibold">
+                  <span className="text-xs text-white/80 uppercase tracking-widest block font-medium">
                     {card.category}
                   </span>
                 </div>

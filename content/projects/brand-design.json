@@ -1,0 +1,45 @@
+[
+  {
+    "id": "brand-design-1",
+    "title": "Kazi Workspace Brand Identity",
+    "slug": "kazi-workspace-brand-identity",
+    "category": "Brand Design",
+    "subtitle": "Brand Identity & Design System",
+    "summary": "Complete brand overhaul and modern design system for a premier co-working brand.",
+    "tags": ["Brand Design", "Typography", "Visual System"],
+    "image": "/images/projects/brand-design/brand-design-1.jpg",
+    "fallbackImage": "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop",
+    "images": [
+      "/images/projects/brand-design/brand-design-1a.jpg",
+      "/images/projects/brand-design/brand-design-1b.jpg",
+      "/images/projects/brand-design/brand-design-1c.jpg"
+    ],
+    "fallbackImages": [
+      "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1542744094-3a31b272c490?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop"
+    ],
+    "year": "2026"
+  },
+  {
+    "id": "brand-design-2",
+    "title": "Urban Beats Festival Identity",
+    "slug": "urban-beats-festival-identity",
+    "category": "Brand Design",
+    "medium": "Brand Artwork & Event Graphics",
+    "summary": "High-contrast visual design assets and promotional graphic flyers for a contemporary music event.",
+    "tags": ["Brand Artwork", "Event"],
+    "image": "/images/projects/brand-design/brand-design-2.jpg",
+    "fallbackImage": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1000&auto=format&fit=crop",
+    "images": [
+      "/images/projects/brand-design/brand-design-2a.jpg",
+      "/images/projects/brand-design/brand-design-2b.jpg",
+      "/images/projects/brand-design/brand-design-2c.jpg"
+    ],
+    "fallbackImages": [
+      "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1000&auto=format&fit=crop"
+    ]
+  }
+]

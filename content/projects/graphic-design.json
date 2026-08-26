@@ -1,0 +1,46 @@
+[
+  {
+    "id": "graphic-design-1",
+    "title": "Minimalist Poster Series — Boldway",
+    "slug": "minimalist-poster-series",
+    "category": "Graphic Design",
+    "medium": "Print Poster / Graphic Design",
+    "summary": "Experimental typography poster campaign exploring heavy grotesque font pairings and geometric contrasts.",
+    "tags": ["Graphic Design", "Poster", "Typography"],
+    "image": "/images/projects/graphic-design/graphic-design-1.jpg",
+    "fallbackImage": "https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    "id": "graphic-design-2",
+    "title": "Botanica Packaging Mockup",
+    "slug": "botanica-packaging-mockup",
+    "category": "Graphic Design",
+    "medium": "Package & Label Graphic Design",
+    "summary": "Modern packaging artwork utilizing organic color swatches and clean typographic structures.",
+    "tags": ["Packaging", "Print"],
+    "image": "/images/projects/graphic-design/graphic-design-2.jpg",
+    "fallbackImage": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    "id": "graphic-design-3",
+    "title": "Contemporary Exhibition Catalog",
+    "slug": "contemporary-exhibition-catalog",
+    "category": "Graphic Design",
+    "medium": "Editorial & Print Layout",
+    "summary": "Minimal editorial design and editorial layout for a Nairobi art showcase.",
+    "tags": ["Editorial", "Print"],
+    "image": "/images/projects/graphic-design/graphic-design-3.jpg",
+    "fallbackImage": "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    "id": "graphic-design-4",
+    "title": "Vanguard Typography Billboard",
+    "slug": "vanguard-typography-billboard",
+    "category": "Graphic Design",
+    "medium": "Out-of-Home Billboard Artwork",
+    "summary": "Large scale outdoor graphic design layout utilizing Stackup's signature high-contrast display typography.",
+    "tags": ["Billboard", "OOH"],
+    "image": "/images/projects/graphic-design/graphic-design-4.jpg",
+    "fallbackImage": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=1000&auto=format&fit=crop"
+  }
+]

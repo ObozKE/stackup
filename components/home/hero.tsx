@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section className="relative pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Restored Eyebrow Badge positioned compactly between header and hero title */}
+        {/* Eyebrow Badge */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -20,12 +20,12 @@ export default function Hero() {
           <span>Creative Studio</span>
         </motion.div>
 
-        {/* Display Heading with Inline Photo Chips */}
+        {/* Display Heading with Bold Typography */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tighter text-foreground uppercase max-w-5xl mx-auto"
+          className="font-display font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tighter text-foreground uppercase max-w-5xl mx-auto"
         >
           WE{" "}
           <span className="inline-block align-middle mx-1.5 sm:mx-3 relative w-16 h-10 sm:w-28 sm:h-16 md:w-36 md:h-20 rounded-2xl overflow-hidden shadow-lg border-2 border-background transform -rotate-3 hover:rotate-0 transition-transform duration-300">

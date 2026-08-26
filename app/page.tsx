@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <LogoCloud showPlaceholders={false} />
+      <LogoCloud />
       <ServicesOverview />
       <OurWorkShowcase />
       <ProcessSection />

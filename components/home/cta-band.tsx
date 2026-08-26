@@ -12,7 +12,7 @@ export default function CTABand() {
           • Ready to Elevate Your Brand? •
         </span>
 
-        <h2 className="font-display text-3xl sm:text-7xl md:text-8xl lg:text-9xl uppercase tracking-tighter text-foreground leading-[0.92] sm:leading-[0.88] max-w-5xl mx-auto break-words sm:break-normal">
+        <h2 className="font-display font-bold text-3xl sm:text-7xl md:text-8xl lg:text-9xl uppercase tracking-tighter text-foreground leading-[0.92] sm:leading-[0.88] max-w-5xl mx-auto break-words sm:break-normal">
           LET&apos;S BUILD SOMETHING EXTRAORDINARY.
         </h2>
 

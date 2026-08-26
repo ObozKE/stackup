@@ -35,7 +35,7 @@ export default function ProcessSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Headline + Intro + CTA */}
           <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
-            <span className="text-xs uppercase tracking-widest text-primary font-bold block">
+            <span className="text-xs uppercase tracking-widest text-primary font-medium block">
               • Blueprint •
             </span>
             <h2 className="font-display text-5xl sm:text-6xl md:text-7xl uppercase text-foreground leading-none">
@@ -47,7 +47,7 @@ export default function ProcessSection() {
             <div className="pt-2">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-bold text-sm rounded-full hover:bg-primary/90 transition-all shadow-sm group"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium text-sm rounded-full hover:bg-primary/90 transition-all shadow-sm group"
               >
                 <span>Initiate Your Project</span>
                 <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

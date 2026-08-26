@@ -18,7 +18,7 @@ export default function FAQSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column */}
           <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
-            <span className="text-xs uppercase tracking-widest text-primary font-bold block">
+            <span className="text-xs uppercase tracking-widest text-primary font-medium block">
               • Clarification •
             </span>
             <h2 className="font-display text-5xl sm:text-6xl md:text-7xl uppercase text-foreground leading-none">
@@ -30,7 +30,7 @@ export default function FAQSection() {
             <div className="pt-2">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background font-bold text-sm rounded-full hover:bg-primary hover:text-primary-foreground transition-all group"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background font-medium text-sm rounded-full hover:bg-primary hover:text-primary-foreground transition-all group"
               >
                 <span>Have More Questions?</span>
                 <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -54,7 +54,7 @@ export default function FAQSection() {
                     className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none group"
                   >
                     <div className="flex items-center gap-4">
-                      <span className="font-display text-lg text-primary font-bold">
+                      <span className="font-display text-lg text-primary font-medium">
                         {formattedNumber}
                       </span>
                       <h3 className="font-display text-xl sm:text-2xl text-foreground uppercase tracking-tight group-hover:text-primary transition-colors">

@@ -47,7 +47,7 @@ export default function ContactForm() {
           <div className="pt-4">
             <button
               onClick={() => setSubmitted(false)}
-              className="px-6 py-2.5 bg-surface border border-surface-border text-foreground font-semibold text-xs rounded-full hover:bg-surface-border transition-colors"
+              className="px-6 py-2.5 bg-surface border border-surface-border text-foreground font-medium text-xs rounded-full hover:bg-surface-border transition-colors"
             >
               Submit Another Response
             </button>
@@ -59,7 +59,7 @@ export default function ContactForm() {
           <div className="space-y-2">
             <label
               htmlFor="name"
-              className="text-xs uppercase tracking-widest font-bold text-foreground block"
+              className="text-xs uppercase tracking-widest font-medium text-foreground block"
             >
               Your Name *
             </label>
@@ -79,7 +79,7 @@ export default function ContactForm() {
           <div className="space-y-2">
             <label
               htmlFor="email"
-              className="text-xs uppercase tracking-widest font-bold text-foreground block"
+              className="text-xs uppercase tracking-widest font-medium text-foreground block"
             >
               Email Address *
             </label>
@@ -99,7 +99,7 @@ export default function ContactForm() {
           <div className="space-y-2">
             <label
               htmlFor="service"
-              className="text-xs uppercase tracking-widest font-bold text-foreground block"
+              className="text-xs uppercase tracking-widest font-medium text-foreground block"
             >
               Project Service Type *
             </label>
@@ -123,7 +123,7 @@ export default function ContactForm() {
           <div className="space-y-2">
             <label
               htmlFor="message"
-              className="text-xs uppercase tracking-widest font-bold text-foreground block"
+              className="text-xs uppercase tracking-widest font-medium text-foreground block"
             >
               Project Brief / Details (Optional)
             </label>
@@ -146,7 +146,7 @@ export default function ContactForm() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full py-4 bg-primary text-primary-foreground font-bold text-base rounded-full hover:bg-primary/90 transition-all duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
+            className="w-full py-4 bg-primary text-primary-foreground font-medium text-base rounded-full hover:bg-primary/90 transition-all duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
           >
             <span>Submit Project Request</span>
             <Send className="w-4 h-4" />
