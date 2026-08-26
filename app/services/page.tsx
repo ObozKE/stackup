@@ -8,7 +8,7 @@ import CTABand from "@/components/home/cta-band";
 export const metadata: Metadata = {
   title: "Services — Web Development, Design & SMM",
   description:
-    "Explore Stackup's core capabilities in Web Development, Graphic & Brand Design, and Social Media Management tailored for Nairobi and global brands.",
+    "Explore Stackup Kenya's core capabilities in Web Development, Graphic & Brand Design, and Social Media Management tailored for Nairobi and global brands.",
 };
 
 export default function ServicesPage() {

@@ -31,7 +31,7 @@ export default function GraphicDesignGallery({ items }: GraphicDesignGalleryProp
           </h2>
         </div>
         <p className="text-muted-foreground text-sm max-w-md font-sans">
-          A dedicated masonry collection of posters, social artwork, packaging mockups, and print collateral crafted by Stackup.
+          A dedicated masonry collection of posters, social artwork, packaging mockups, and print collateral crafted by Stackup Kenya.
         </p>
       </div>
 

@@ -4,9 +4,9 @@ import { ShieldCheck, ArrowLeft, Mail, Phone } from "lucide-react";
 import CTABand from "@/components/home/cta-band";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy & Legal Terms — Stackup Creative Agency",
+  title: "Privacy Policy & Legal Terms — Stackup Kenya",
   description:
-    "Legal policies, terms of service, intellectual property guidelines, and privacy practices protecting Stackup Creative Agency and our clients.",
+    "Legal policies, terms of service, intellectual property guidelines, and privacy practices protecting Stackup Kenya and our clients.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -44,7 +44,7 @@ export default function PrivacyPolicyPage() {
               1. Overview & Acceptance
             </h2>
             <p className="text-muted-foreground text-sm sm:text-base">
-              Welcome to Stackup (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). By engaging with our website, commissioning creative services (Web Development, Graphic Design, Brand Design, Product Design, or Social Media Management), or submitting project briefs, you agree to comply with and be bound by the following legal policies and terms.
+              Welcome to Stackup Kenya (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). By engaging with our website, commissioning creative services (Web Development, Graphic Design, Brand Design, Product Design, or Social Media Management), or submitting project briefs, you agree to comply with and be bound by the following legal policies and terms.
             </p>
           </div>
 
@@ -54,7 +54,7 @@ export default function PrivacyPolicyPage() {
               2. Intellectual Property Rights
             </h2>
             <p className="text-muted-foreground text-sm sm:text-base">
-              All proprietary agency frameworks, original design concepts, source code repositories, and brand materials created by Stackup remain the intellectual property of Stackup until all agreed project invoices are settled in full. Upon final payment, ownership of customized client deliverables is transferred as defined in the client project agreement.
+              All proprietary agency frameworks, original design concepts, source code repositories, and brand materials created by Stackup Kenya remain the intellectual property of Stackup Kenya until all agreed project invoices are settled in full. Upon final payment, ownership of customized client deliverables is transferred as defined in the client project agreement.
             </p>
           </div>
 
@@ -64,7 +64,7 @@ export default function PrivacyPolicyPage() {
               3. Data Protection & Privacy (Kenya DPA 2019)
             </h2>
             <p className="text-muted-foreground text-sm sm:text-base">
-              Stackup respects your privacy and adheres to the Kenya Data Protection Act (2019). Information collected through our contact form (such as your name, email address, phone number, and project details) is strictly used to evaluate and fulfill your creative requests. We do not sell, trade, or distribute your personal data to third parties.
+              Stackup Kenya respects your privacy and adheres to the Kenya Data Protection Act (2019). Information collected through our contact form (such as your name, email address, phone number, and project details) is strictly used to evaluate and fulfill your creative requests. We do not sell, trade, or distribute your personal data to third parties.
             </p>
           </div>
 
@@ -74,7 +74,7 @@ export default function PrivacyPolicyPage() {
               4. Limitation of Liability
             </h2>
             <p className="text-muted-foreground text-sm sm:text-base">
-              While Stackup engineers all web applications and visual designs to elite professional standards, Stackup shall not be held liable for indirect, incidental, or consequential damages resulting from third-party hosting outages, external API modifications, or unauthorized client access post-handover.
+              While Stackup Kenya engineers all web applications and visual designs to elite professional standards, Stackup Kenya shall not be held liable for indirect, incidental, or consequential damages resulting from third-party hosting outages, external API modifications, or unauthorized client access post-handover.
             </p>
           </div>
 

@@ -25,7 +25,7 @@ export default function FAQSection() {
               FAQ
             </h2>
             <p className="text-muted-foreground text-base sm:text-lg max-w-md font-sans">
-              Have questions about how Stackup collaborates with clients? Here are quick answers to our most frequent inquiries.
+              Have questions about how Stackup Kenya collaborates with clients? Here are quick answers to our most frequent inquiries.
             </p>
             <div className="pt-2">
               <Link

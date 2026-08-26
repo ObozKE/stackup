@@ -14,11 +14,11 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "Stackup — Creative Agency | Nairobi, Kenya",
-    template: "%s | Stackup Creative Agency",
+    default: "Stackup Kenya — Creative Agency | Nairobi, Kenya",
+    template: "%s | Stackup Kenya",
   },
   description:
-    "Stackup is a full-service creative agency in Nairobi, Kenya specializing in Web Development, Graphic & UI/UX Design, and Social Media Management.",
+    "Stackup Kenya is a full-service creative agency in Nairobi, Kenya specializing in Web Development, Graphic & UI/UX Design, and Social Media Management.",
   icons: {
     icon: "/stackup%20svg.svg",
     shortcut: "/stackup%20svg.svg",
@@ -30,21 +30,21 @@ export const metadata: Metadata = {
     "Graphic Design Nairobi",
     "UI UX Design Kenya",
     "Social Media Management Nairobi",
-    "Stackup Creative",
+    "Stackup Kenya",
   ],
-  authors: [{ name: "Stackup" }],
+  authors: [{ name: "Stackup Kenya" }],
   openGraph: {
     type: "website",
     locale: "en_KE",
     url: "https://stackup.co.ke",
-    title: "Stackup — Creative Agency | Nairobi, Kenya",
+    title: "Stackup Kenya — Creative Agency | Nairobi, Kenya",
     description:
-      "Stackup is a full-service creative agency in Nairobi, Kenya specializing in Web Development, Graphic & UI/UX Design, and Social Media Management.",
-    siteName: "Stackup",
+      "Stackup Kenya is a full-service creative agency in Nairobi, Kenya specializing in Web Development, Graphic & UI/UX Design, and Social Media Management.",
+    siteName: "Stackup Kenya",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stackup — Creative Agency | Nairobi, Kenya",
+    title: "Stackup Kenya — Creative Agency | Nairobi, Kenya",
     description:
       "Full-service creative agency in Nairobi, Kenya: Web Development, Design, & Social Media Management.",
   },

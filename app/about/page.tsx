@@ -5,9 +5,9 @@ import ProcessSection from "@/components/home/process-section";
 import CTABand from "@/components/home/cta-band";
 
 export const metadata: Metadata = {
-  title: "About Us — Stackup Creative Agency",
+  title: "About Us — Stackup Kenya",
   description:
-    "Learn about Stackup, a Nairobi-based creative agency uniting strategy, high-performance web development, graphic design, and social marketing.",
+    "Learn about Stackup Kenya, a Nairobi-based creative agency uniting strategy, high-performance web development, graphic design, and social marketing.",
 };
 
 export default function AboutPage() {
@@ -47,7 +47,7 @@ export default function AboutPage() {
             <span>• Studio Intro •</span>
           </div>
           <h1 className="font-display text-5xl sm:text-7xl md:text-8xl uppercase tracking-tighter text-foreground max-w-4xl">
-            ABOUT STACKUP.
+            ABOUT STACKUP KENYA.
           </h1>
         </div>
       </section>
@@ -64,7 +64,7 @@ export default function AboutPage() {
                 WHERE CREATIVITY MEETS HIGH PERFORMANCE.
               </h2>
               <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-                At Stackup, we believe modern brands win at the intersection of striking design and technical performance. A beautiful website that loads slowly fails your business; a fast website with mediocre design fails your brand.
+                At Stackup Kenya, we believe modern brands win at the intersection of striking design and technical performance. A beautiful website that loads slowly fails your business; a fast website with mediocre design fails your brand.
               </p>
               <p className="text-muted-foreground text-base leading-relaxed">
                 Our multi-disciplinary discipline combines Web Development, Graphic & Brand Design, and Social Media Management into one seamless agency experience.
@@ -74,7 +74,7 @@ export default function AboutPage() {
                   href="/contact"
                   className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground font-bold text-sm rounded-full hover:bg-primary/90 transition-all shadow-md group"
                 >
-                  <span>Work With Stackup</span>
+                  <span>Work With Stackup Kenya</span>
                   <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </Link>
               </div>

@@ -14,7 +14,7 @@ export default function ServicesOverview() {
               • Services Spectrum •
             </span>
             <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase text-foreground">
-              WHAT WE DO
+              OUR SERVICES
             </h2>
           </div>
           <Link

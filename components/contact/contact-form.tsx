@@ -29,7 +29,7 @@ export default function ContactForm() {
           START A PROJECT
         </h2>
         <p className="text-muted-foreground text-sm font-sans">
-          Fill in your project details below to submit directly to Stackup.
+          Fill in your project details below to submit directly to Stackup Kenya.
         </p>
       </div>
 
@@ -42,7 +42,7 @@ export default function ContactForm() {
             THANK YOU FOR REACHING OUT!
           </h3>
           <p className="text-muted-foreground text-sm max-w-md mx-auto">
-            Your project details have been recorded. We will review your inquiry and respond within 24 business hours.
+            Your project details have been recorded. We respond to all inquiries instantly.
           </p>
           <div className="pt-4">
             <button

@@ -26,9 +26,9 @@ interface ProjectFilterProps {
 
 const CATEGORIES = [
   "Web Development",
-  "Brand Design",
-  "Social Media Management",
   "Graphic Design",
+  "Social Media Management",
+  "Brand Design",
 ];
 
 export default function ProjectFilter({ projects }: ProjectFilterProps) {
@@ -91,7 +91,6 @@ export default function ProjectFilter({ projects }: ProjectFilterProps) {
             const isFullFit =
               project.category === "Graphic Design" ||
               project.category === "Social Media Management";
-            const targetUrl = project.websiteUrl || `/contact?service=${encodeURIComponent(project.category)}`;
 
             if (isBrandDesign) {
               return (
@@ -103,30 +102,48 @@ export default function ProjectFilter({ projects }: ProjectFilterProps) {
               );
             }
 
+            // ONLY Web Development category redirects to link and has hover scale effect
+            if (isWebDev) {
+              const targetUrl = project.websiteUrl || "#";
+              return (
+                <a
+                  key={project.id}
+                  href={targetUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full aspect-[16/10] sm:aspect-[4/3] bg-surface rounded-[24px] overflow-hidden relative group border border-surface-border shadow-2xs flex items-center justify-center cursor-pointer"
+                >
+                  <Image
+                    src={project.image}
+                    alt={project.title || project.category}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    onError={() => handleImageError(project.id)}
+                  />
+                </a>
+              );
+            }
+
+            // All other categories (Graphic Design, Social Media Management) render as non-clickable div with NO hover scale effect & NO link redirect
             return (
-              <a
+              <div
                 key={project.id}
-                href={targetUrl}
-                target={isWebDev && project.websiteUrl ? "_blank" : "_self"}
-                rel="noopener noreferrer"
                 className={`w-full ${
                   isFullFit
                     ? "aspect-[3/4] bg-surface/90"
                     : "aspect-[16/10] sm:aspect-[4/3] bg-surface"
-                } rounded-[24px] overflow-hidden relative group border border-surface-border shadow-2xs flex items-center justify-center`}
+                } rounded-[24px] overflow-hidden relative border border-surface-border shadow-2xs flex items-center justify-center`}
               >
-                {/* Background Image */}
                 <Image
                   src={project.image}
                   alt={project.title || project.category}
                   fill
-                  className={`${
-                    isFullFit ? "object-contain p-2 sm:p-3" : "object-cover"
-                  } group-hover:scale-105 transition-transform duration-500`}
+                  className="object-contain p-2 sm:p-3"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   onError={() => handleImageError(project.id)}
                 />
-              </a>
+              </div>
             );
           })}
         </div>

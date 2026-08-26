@@ -3,7 +3,7 @@
 export default function WhatsAppButton() {
   const whatsappNumber = "254790870596";
   const defaultMessage = encodeURIComponent(
-    "Hi Stackup! I would like to inquire about starting a project with your agency."
+    "Hi Stackup Kenya! I would like to inquire about starting a project with your agency."
   );
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${defaultMessage}`;
 
@@ -12,8 +12,8 @@ export default function WhatsAppButton() {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Message Stackup on WhatsApp"
-      title="Message Stackup on WhatsApp (0790870596)"
+      aria-label="Message Stackup Kenya on WhatsApp"
+      title="Message Stackup Kenya on WhatsApp (0790870596)"
       className="fixed bottom-6 right-6 z-50 p-3.5 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 flex items-center justify-center"
     >
       {/* Subtle Pulsing Beacon */}

@@ -9,14 +9,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import insightsData from "@/content/insights.json";
+import { getProjectsWithExistingImages } from "@/lib/projects-loader";
 
 export default function Home() {
+  const projects = getProjectsWithExistingImages();
+
   return (
     <>
       <Hero />
       <LogoCloud />
       <ServicesOverview />
-      <OurWorkShowcase />
+      <OurWorkShowcase projects={projects} />
       <ProcessSection />
       
       {/* Latest Insights Teaser */}

@@ -5,9 +5,9 @@ import insightsData from "@/content/insights.json";
 import CTABand from "@/components/home/cta-band";
 
 export const metadata: Metadata = {
-  title: "Insights & Articles — Stackup Creative Agency",
+  title: "Insights & Articles — Stackup Kenya",
   description:
-    "Perspectives, design principles, and engineering guides from Stackup on web development, graphic design, and social media marketing.",
+    "Perspectives, design principles, and engineering guides from Stackup Kenya on web development, graphic design, and social media marketing.",
 };
 
 export default function InsightsPage() {

@@ -106,7 +106,7 @@ export default function Footer() {
 
         {/* Bottom Copyright & Legal Link Bar */}
         <div className="pt-8 border-t border-surface-border flex flex-col sm:flex-row items-center justify-between text-xs text-muted-foreground gap-4">
-          <p>© {new Date().getFullYear()} StackupKenya. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Stackup Kenya. All rights reserved.</p>
           <Link
             href="/privacy"
             className="font-semibold text-foreground hover:text-primary transition-colors underline decoration-primary/40 underline-offset-4"

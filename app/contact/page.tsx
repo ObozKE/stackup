@@ -5,9 +5,9 @@ import SocialLinks from "@/components/ui/social-links";
 import { Mail, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Stackup Creative Agency",
+  title: "Contact Us — Stackup Kenya",
   description:
-    "Get in touch with Stackup, a creative agency in Nairobi, Kenya. Send your project brief for Web Development, Design, or Social Media Management.",
+    "Get in touch with Stackup Kenya, a creative agency in Nairobi, Kenya. Send your project brief for Web Development, Design, or Social Media Management.",
 };
 
 export default function ContactPage() {
@@ -39,7 +39,7 @@ export default function ContactPage() {
                   CONNECT DIRECTLY WITH OUR TEAM
                 </h2>
                 <p className="text-muted-foreground text-base leading-relaxed">
-                  We respond to all project inquiries within 24 business hours.
+                  We respond to all inquiries instantly.
                 </p>
               </div>
 
@@ -78,7 +78,7 @@ export default function ContactPage() {
               {/* Social Channels with SVG Icons */}
               <div className="space-y-3 pt-2">
                 <span className="text-xs uppercase tracking-widest font-bold text-muted-foreground block">
-                  Follow Stackup
+                  Follow Stackup Kenya
                 </span>
                 <SocialLinks />
               </div>
