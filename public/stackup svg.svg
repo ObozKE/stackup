@@ -1,34 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 115" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="100%" height="100%">
+  <!-- Definitions for the precise geometric cuts in the logo -->
   <defs>
-    <!-- Mask to create the precise vertical and horizontal stencil gaps -->
-    <mask id="cutout">
-      <rect x="0" y="0" width="100" height="115" fill="white" />
-      <rect x="47.5" y="0" width="5" height="115" fill="black" />
-      <rect x="0" y="32.5" width="100" height="5" fill="black" />
-      <rect x="0" y="62.5" width="100" height="5" fill="black" />
+    <mask id="logo-cuts">
+      <!-- Base canvas: keep everything white by default -->
+      <rect width="140" height="140" fill="white" />
+      
+      <!-- Vertical center gap -->
+      <rect x="67" y="0" width="6" height="140" fill="black" />
+      
+      <!-- Horizontal upper gap -->
+      <rect x="0" y="40" width="140" height="6" fill="black" />
+      
+      <!-- Horizontal lower gap -->
+      <rect x="0" y="74" width="140" height="6" fill="black" />
     </mask>
   </defs>
 
-  <g stroke="#ffffff" stroke-width="10" fill="none" stroke-linecap="butt" mask="url(#cutout)">
-    <!-- Top 'S' Arc -->
-    <path d="M 35,35 A 15,15 0 0,1 65,35" />
-
-    <!-- Left 'U' Stem -->
-    <line x1="20" y1="30" x2="20" y2="70" />
-
-    <!-- Right 'U' Stem -->
-    <line x1="80" y1="30" x2="80" y2="70" />
-
-    <!-- Inner 'S' Cross (Left) -->
-    <path d="M 35,35 A 15,15 0 0,0 50,50" />
-
-    <!-- Inner 'S' Cross (Right) -->
-    <path d="M 50,50 A 15,15 0 0,1 65,65" />
-
-    <!-- Bottom 'S' Arc -->
-    <path d="M 65,65 A 15,15 0 0,1 35,65" />
-
-    <!-- Bottom 'U' Arc -->
-    <path d="M 80,65 A 30,30 0 0,1 20,65" />
+  <!-- Apply the mask and official brand red -->
+  <g mask="url(#logo-cuts)" stroke="#DA011A" stroke-width="15" fill="none" stroke-linecap="butt">
+    
+    <!-- Outer 'U' / Shield Shape -->
+    <!-- Starts just below the top gap and curves under the bottom gap -->
+    <path d="M 20 46 L 20 80 A 50 50 0 0 0 120 80 L 120 46" />
+    
+    <!-- Inner 'S' Shape -->
+    <!-- A mathematically perfect continuous S-curve masked by the gaps -->
+    <path d="M 90 40 A 20 20 0 0 0 50 40 C 50 60, 90 60, 90 80 A 20 20 0 0 1 50 80" />
+    
   </g>
 </svg>
