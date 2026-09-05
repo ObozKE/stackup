@@ -1,4 +1,4 @@
-import { NextResponse } from "next";
+import { NextResponse } from "next/server";
 import insightsData from "@/content/insights.json";
 
 export async function GET() {
