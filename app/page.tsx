@@ -13,6 +13,8 @@ import { getProjectsWithExistingImages } from "@/lib/projects-loader";
 
 export default function Home() {
   const projects = getProjectsWithExistingImages();
+  // Show top 3 latest articles on homepage
+  const latestInsights = insightsData.slice(0, 3);
 
   return (
     <>
@@ -45,10 +47,11 @@ export default function Home() {
 
           {/* 3-Column Card Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {insightsData.map((article) => (
-              <article
+            {latestInsights.map((article) => (
+              <Link
                 key={article.id}
-                className="group flex flex-col bg-background rounded-[20px] border border-surface-border overflow-hidden hover:border-primary/40 transition-all duration-300 shadow-2xs"
+                href={`/insights/${article.slug}`}
+                className="group flex flex-col bg-background rounded-[20px] border border-surface-border overflow-hidden hover:border-primary/40 transition-all duration-300 shadow-2xs hover:shadow-md cursor-pointer"
               >
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-surface">
                   <Image
@@ -73,11 +76,11 @@ export default function Home() {
                   </div>
                   <div className="pt-2">
                     <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors inline-flex items-center gap-1">
-                      Read Article <ArrowUpRight className="w-3 h-3" />
+                      Read Article <ArrowUpRight className="w-3.5 h-3.5" />
                     </span>
                   </div>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>

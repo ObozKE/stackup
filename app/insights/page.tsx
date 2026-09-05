@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import insightsData from "@/content/insights.json";
 import CTABand from "@/components/home/cta-band";
@@ -7,7 +8,7 @@ import CTABand from "@/components/home/cta-band";
 export const metadata: Metadata = {
   title: "Insights & Articles — Stackup Kenya",
   description:
-    "Perspectives, design principles, and engineering guides from Stackup Kenya on web development, graphic design, and social media marketing.",
+    "Perspectives, design principles, and engineering guides from Stackup Kenya on web development, graphic design, and social media marketing in Nairobi.",
 };
 
 export default function InsightsPage() {
@@ -30,9 +31,10 @@ export default function InsightsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {insightsData.map((article) => (
-              <article
+              <Link
                 key={article.id}
-                className="group flex flex-col bg-background rounded-[24px] border border-surface-border overflow-hidden hover:border-primary/40 transition-all duration-300 shadow-2xs hover:shadow-md"
+                href={`/insights/${article.slug}`}
+                className="group flex flex-col bg-background rounded-[24px] border border-surface-border overflow-hidden hover:border-primary/40 transition-all duration-300 shadow-2xs hover:shadow-md cursor-pointer"
               >
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-surface">
                   <Image
@@ -66,7 +68,7 @@ export default function InsightsPage() {
                     </span>
                   </div>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>

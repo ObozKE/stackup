@@ -2,7 +2,23 @@
 
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { Send, CheckCircle } from "lucide-react";
+import { Send, CheckCircle, Loader2 } from "lucide-react";
+
+// ============================================================================
+// GOOGLE FORM CONFIGURATION (stackup kenya website)
+// Verified Action URL and Entry IDs extracted directly from form HTML
+// ============================================================================
+const GOOGLE_FORM_ACTION_URL =
+  process.env.NEXT_PUBLIC_GOOGLE_FORM_URL ||
+  "https://docs.google.com/forms/d/e/1FAIpQLSdfKWbT7wMOLjmjNI4OAx6A4_3ub9zqAXcppGYHgZjU371bTA/formResponse";
+
+const ENTRY_IDS = {
+  name: process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_NAME || "entry.47284777",
+  phone: process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_PHONE || "entry.1630308019",
+  email: process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_EMAIL || "entry.1438439933",
+  service: process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_SERVICE || "entry.448324612",
+  message: process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_MESSAGE || "entry.387243583",
+};
 
 export default function ContactForm() {
   const searchParams = useSearchParams();
@@ -11,19 +27,32 @@ export default function ContactForm() {
   const [service, setService] = useState(initialService);
   const [formData, setFormData] = useState({
     name: "",
+    phone: "",
     email: "",
     message: "",
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // {{TODO: Post directly to Google Form action endpoint: https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse}}
-    setSubmitted(true);
+  const handleSubmit = () => {
+    setIsSubmitting(true);
+    // Show success screen shortly after native hidden form submit completes
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSubmitted(true);
+    }, 600);
   };
 
   return (
     <div className="bg-background rounded-[24px] border border-surface-border p-8 sm:p-12 shadow-md">
+      {/* Hidden iframe target for 100% reliable CORS-free Google Form submission */}
+      <iframe
+        name="hidden_google_form"
+        id="hidden_google_form"
+        style={{ display: "none" }}
+      />
+
       <div className="mb-8">
         <h2 className="font-display text-3xl sm:text-4xl text-foreground uppercase tracking-tight mb-2">
           START A PROJECT
@@ -46,7 +75,10 @@ export default function ContactForm() {
           </p>
           <div className="pt-4">
             <button
-              onClick={() => setSubmitted(false)}
+              onClick={() => {
+                setSubmitted(false);
+                setFormData({ name: "", phone: "", email: "", message: "" });
+              }}
               className="px-6 py-2.5 bg-surface border border-surface-border text-foreground font-medium text-xs rounded-full hover:bg-surface-border transition-colors"
             >
               Submit Another Response
@@ -54,8 +86,14 @@ export default function ContactForm() {
           </div>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Name Field */}
+        <form
+          action={GOOGLE_FORM_ACTION_URL}
+          method="POST"
+          target="hidden_google_form"
+          onSubmit={handleSubmit}
+          className="space-y-6"
+        >
+          {/* Name Field (Mandatory) */}
           <div className="space-y-2">
             <label
               htmlFor="name"
@@ -66,7 +104,7 @@ export default function ContactForm() {
             <input
               type="text"
               id="name"
-              name="entry.1000001" // {{TODO: Replace entry ID with your Google Form field ID}}
+              name={ENTRY_IDS.name}
               required
               placeholder="e.g. Alex Mwangi"
               value={formData.name}
@@ -75,19 +113,38 @@ export default function ContactForm() {
             />
           </div>
 
-          {/* Email Field */}
+          {/* Phone Field (Mandatory) */}
+          <div className="space-y-2">
+            <label
+              htmlFor="phone"
+              className="text-xs uppercase tracking-widest font-medium text-foreground block"
+            >
+              Phone Number *
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name={ENTRY_IDS.phone}
+              required
+              placeholder="e.g. 0712 345 678"
+              value={formData.phone}
+              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              className="w-full px-4 py-3.5 rounded-xl bg-surface border border-surface-border text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary transition-colors text-sm font-medium"
+            />
+          </div>
+
+          {/* Email Field (Optional) */}
           <div className="space-y-2">
             <label
               htmlFor="email"
               className="text-xs uppercase tracking-widest font-medium text-foreground block"
             >
-              Email Address *
+              Email Address (Optional)
             </label>
             <input
               type="email"
               id="email"
-              name="entry.1000002" // {{TODO: Replace entry ID with your Google Form field ID}}
-              required
+              name={ENTRY_IDS.email}
               placeholder="e.g. alex@company.co.ke"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -95,7 +152,7 @@ export default function ContactForm() {
             />
           </div>
 
-          {/* Service Selection */}
+          {/* Service Selection (Mandatory) */}
           <div className="space-y-2">
             <label
               htmlFor="service"
@@ -105,7 +162,7 @@ export default function ContactForm() {
             </label>
             <select
               id="service"
-              name="entry.1000003" // {{TODO: Replace entry ID with your Google Form field ID}}
+              name={ENTRY_IDS.service}
               value={service}
               onChange={(e) => setService(e.target.value)}
               className="w-full px-4 py-3.5 rounded-xl bg-surface border border-surface-border text-foreground focus:outline-none focus:border-primary transition-colors text-sm font-medium"
@@ -129,7 +186,7 @@ export default function ContactForm() {
             </label>
             <textarea
               id="message"
-              name="entry.1000004" // {{TODO: Replace entry ID with your Google Form field ID}}
+              name={ENTRY_IDS.message}
               rows={5}
               placeholder="Tell us about your project goals, timelines, and requirements..."
               value={formData.message}
@@ -140,16 +197,26 @@ export default function ContactForm() {
 
           {/* Note on Google Form destination */}
           <p className="text-xs text-muted-foreground">
-            * Submissions are recorded directly in our project Google Form database.
+            * Submissions are recorded directly into your Google Form responses spreadsheet.
           </p>
 
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full py-4 bg-primary text-primary-foreground font-medium text-base rounded-full hover:bg-primary/90 transition-all duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
+            disabled={isSubmitting}
+            className="w-full py-4 bg-primary text-primary-foreground font-medium text-base rounded-full hover:bg-primary/90 transition-all duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg disabled:opacity-70"
           >
-            <span>Submit Project Request</span>
-            <Send className="w-4 h-4" />
+            {isSubmitting ? (
+              <>
+                <Loader2 className="w-5 h-5 animate-spin" />
+                <span>Submitting...</span>
+              </>
+            ) : (
+              <>
+                <span>Submit Project Request</span>
+                <Send className="w-4 h-4" />
+              </>
+            )}
           </button>
         </form>
       )}

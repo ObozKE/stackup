@@ -3,30 +3,154 @@
     "id": "insight-1",
     "title": "Why Your Website Is Not Converting (And How Stackup Kenya Can Fix It)",
     "slug": "why-your-website-is-not-converting",
-    "date": "Aug 02, 2026",
+    "date": "Aug 28, 2026",
     "category": "Web Development",
     "readTime": "5 min read",
     "summary": "Is your website driving traffic but zero sales or leads? Discover the key reasons bad design and slow speeds cost you money—and let Stackup Kenya engineer a high-converting website tailored to grow your business.",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
+    "author": "Stackup Kenya Editorial",
+    "sections": [
+      {
+        "heading": "The Real Cost of a Slow, Non-Converting Website",
+        "body": "In today’s fast-paced digital ecosystem across Nairobi and international markets, potential customers judge your brand within 3 seconds of landing on your website. If your site takes too long to load on mobile networks, lacks clear call-to-action buttons, or feels cluttered, users will bounce directly to your competitors."
+      },
+      {
+        "heading": "1. Mobile-First Optimization is Non-Negotiable",
+        "body": "Over 80% of web traffic in Kenya comes from mobile devices. If your website is not lightning-fast and responsive across smartphones, you are losing more than half of your prospective clients before they even read your headline."
+      },
+      {
+        "heading": "2. Unclear Value Proposition & CTA Placement",
+        "body": "Visitors should immediately understand what your business offers and what step to take next. Stackup Kenya designs strategic layout hierarchies with prominent CTAs (like 'Book a Consultation' or 'Request a Quote') to convert casual visitors into paying customers."
+      },
+      {
+        "heading": "How Stackup Kenya Transforms Your Digital Presence",
+        "body": "Our web development team combines modern frameworks like Next.js with tailored UX/UI design to create fast, secure, and SEO-optimized web experiences. We focus on page load speed, search engine indexing, and seamless conversion funnels tailored to Kenyan and global businesses."
+      }
+    ]
   },
   {
     "id": "insight-2",
     "title": "The Power of High-Contrast Visual Design & Bold Grotesque Typography",
     "slug": "high-contrast-visual-design-typography",
-    "date": "Jul 28, 2026",
+    "date": "Aug 20, 2026",
     "category": "Graphic Design",
     "readTime": "4 min read",
     "summary": "Why minimalist light-mode design coupled with high-impact display typography creates unforgettable visual storytelling for contemporary brands.",
-    "image": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1000&auto=format&fit=crop"
+    "image": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1000&auto=format&fit=crop",
+    "author": "Stackup Kenya Creative Studio",
+    "sections": [
+      {
+        "heading": "Cutting Through Digital Noise with High Contrast",
+        "body": "With thousands of marketing messages competing for attention daily, visual clarity is your brand's greatest asset. High-contrast color palettes combined with structured grid alignments draw the eye instantly to key messaging."
+      },
+      {
+        "heading": "Why Bold Grotesque Typography Works",
+        "body": "Typography is not just text—it is tone of voice. Bold display grotesques convey confidence, clarity, and modern professionalism. When paired with clean sans-serif body type, it creates an authoritative brand presence."
+      },
+      {
+        "heading": "Applying Visual Hierarchy to Modern Marketing Assets",
+        "body": "Whether creating social media graphics, print collateral, or digital brand assets, maintaining strict visual contrast ensures your core message stands out on any screen or billboard across Kenya."
+      }
+    ]
   },
   {
     "id": "insight-3",
     "title": "Building Authentic Social Media Presence for Nairobi & Global Audiences",
     "slug": "building-authentic-social-presence",
-    "date": "Jul 15, 2026",
+    "date": "Aug 12, 2026",
     "category": "Social Marketing",
     "readTime": "6 min read",
-    "summary": "Strategies for crafting visual content that resonates deeply with modern digital communities and drives measurable ROI.",
-    "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop"
+    "summary": "Strategies for crafting visual content that resonates deeply with modern digital communities across Kenya and international markets to drive measurable ROI.",
+    "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop",
+    "author": "Stackup Kenya Marketing Team",
+    "sections": [
+      {
+        "heading": "Moving Beyond Passive Social Media Posting",
+        "body": "Posting generic stock images on Instagram or LinkedIn no longer drives engagement. Modern audiences in Nairobi and beyond demand authentic brand storytelling, high-resolution visuals, and consistent messaging."
+      },
+      {
+        "heading": "Content Pillars for High-Growth Brands",
+        "body": "Successful social media management rests on four core pillars: Educational content, Proof of Work (portfolio showcases), Brand Culture, and Direct Calls-to-Action. Balancing these pillars builds customer trust over time."
+      },
+      {
+        "heading": "Measuring What Matters: Engagement & Conversions",
+        "body": "At Stackup Kenya, our social media management campaigns prioritize lead generation, website referral traffic, and brand authority over vanity metrics like passive likes."
+      }
+    ]
+  },
+  {
+    "id": "insight-4",
+    "title": "Local SEO & GEO-Targeting Strategies: Dominate Search Results in Nairobi & Kenya",
+    "slug": "local-seo-and-geo-targeting-strategies-for-kenyan-businesses",
+    "date": "Sep 02, 2026",
+    "category": "Digital Strategy",
+    "readTime": "7 min read",
+    "summary": "Learn how Kenyan businesses can optimize for local search engines, Google Maps, and AI search engines to rank #1 in Nairobi, Mombasa, and across East Africa.",
+    "image": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=1000&auto=format&fit=crop",
+    "author": "Stackup Kenya SEO Lab",
+    "sections": [
+      {
+        "heading": "Understanding Geographic SEO (GEO-SEO) in Kenya",
+        "body": "When potential clients in Westlands, Kilimani, Mombasa, or Nakuru search for professional agency services, search engines prioritize geographically relevant results. Optimizing your website for localized search terms ensures your business appears right when customers are ready to buy."
+      },
+      {
+        "heading": "Key Pillars of Local SEO Success",
+        "body": "1. **Structured Schema Markup:** Embedding local business schema helps Google index your location, services, and business hours accurately.\n2. **Google Business Profile Optimization:** Synchronizing your name, phone number, and address builds instant search credibility.\n3. **Localized Content Marketing:** Publishing articles tailored to your specific geographic market signals authority to search engine crawlers."
+      },
+      {
+        "heading": "Preparing for AI-Powered Search Engines",
+        "body": "Modern search engines use AI summary engines to answer user prompts directly. Structuring your website content with clear headings, entity relationships, and localized keywords ensures your brand is recommended as a trusted service provider."
+      }
+    ]
+  },
+  {
+    "id": "insight-5",
+    "title": "Brand Identity vs. Logo Design: How to Build a Standout Brand in East Africa",
+    "slug": "brand-identity-vs-logo-design-building-a-memorable-kenyan-brand",
+    "date": "Aug 25, 2026",
+    "category": "Brand Design",
+    "readTime": "5 min read",
+    "summary": "A logo is just the beginning. Discover how a complete brand identity—from color psychology to visual voice—gives your Kenyan startup a competitive edge.",
+    "image": "https://images.unsplash.com/photo-1600508774634-4e11d34730e2?q=80&w=1000&auto=format&fit=crop",
+    "author": "Stackup Kenya Design Lab",
+    "sections": [
+      {
+        "heading": "The Difference Between a Logo and a Brand Identity",
+        "body": "A logo is a single symbol or wordmark used to identify your company. A brand identity is the complete visual system—including typography, color palette, imagery guidelines, iconography, and voice—that shapes how your audience feels about your company."
+      },
+      {
+        "heading": "Why Complete Brand Identity Matters for Kenyan Enterprises",
+        "body": "As markets in Kenya and East Africa mature, consumers favor brands that communicate professionalism and consistency across every touchpoint—from invoice templates and business cards to social media graphics and web design."
+      },
+      {
+        "heading": "Stackup Kenya’s Holistic Branding Process",
+        "body": "We partner with startups and established enterprises to define brand guidelines that scale. We deliver complete brand style guides that empower your internal team to maintain visual consistency everywhere."
+      }
+    ]
+  },
+  {
+    "id": "insight-6",
+    "title": "Why Next.js & Modern Web Architecture Drive Enterprise Growth in 2026",
+    "slug": "why-nextjs-and-modern-web-architecture-drive-e-commerce-growth",
+    "date": "Aug 05, 2026",
+    "category": "Web Development",
+    "readTime": "6 min read",
+    "summary": "Explore why high-performance Next.js web applications outpace legacy platforms in speed, conversion rates, and mobile user experience for African and global brands.",
+    "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1000&auto=format&fit=crop",
+    "author": "Stackup Kenya Engineering Team",
+    "sections": [
+      {
+        "heading": "Beyond Monolithic CMS Platforms",
+        "body": "Legacy monolithic CMS platforms often suffer from slow page load speeds, security vulnerabilities, and bloated plugins. Modern React-based architecture like Next.js pre-renders pages into static HTML for near-instantaneous load times."
+      },
+      {
+        "heading": "SEO & Performance Benefits of Static & Server Pre-Rendering",
+        "body": "Search engines prioritize fast-loading websites with high Core Web Vitals scores. Next.js delivers automatic image optimization, minimal JavaScript payloads, and server-side rendering—boosting your rankings on Google Search."
+      },
+      {
+        "heading": "Scalability & Security for Growing Businesses",
+        "body": "By decoupling the front-end display from backend APIs, your website becomes impervious to common database exploits while handling traffic spikes effortlessly. Stackup Kenya leverages this modern technology stack to build enterprise-grade websites."
+      }
+    ]
   }
 ]
