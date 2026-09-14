@@ -16,7 +16,8 @@ export interface LoadedProjectItem {
   medium?: string;
 }
 
-/* what what hehe boy */
+/* what what hehe man dem is larping boy */
+/* larping at it peak */
 
 export function getProjectsWithExistingImages(): LoadedProjectItem[] {
   const publicDir = path.join(process.cwd(), "public");
