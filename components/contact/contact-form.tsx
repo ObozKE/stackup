@@ -58,7 +58,7 @@ export default function ContactForm() {
           START A PROJECT
         </h2>
         <p className="text-muted-foreground text-sm font-sans">
-          Fill in your project details below to submit directly to Stackup Kenya.
+          Tell us about your software, AI automation, web development, or design project to receive an instant proposal.
         </p>
       </div>
 
@@ -168,6 +168,8 @@ export default function ContactForm() {
               className="w-full px-4 py-3.5 rounded-xl bg-surface border border-surface-border text-foreground focus:outline-none focus:border-primary transition-colors text-sm font-medium"
             >
               <option value="Web Development">Web Development</option>
+              <option value="Custom Software Development">Custom Software Development (POS, CRM, ERP)</option>
+              <option value="AI Integration">AI Integration & Automation</option>
               <option value="Graphic Design">Graphic Design</option>
               <option value="Brand Design">Brand Design</option>
               <option value="Product Design">Product Design</option>
@@ -188,7 +190,7 @@ export default function ContactForm() {
               id="message"
               name={ENTRY_IDS.message}
               rows={5}
-              placeholder="Tell us about your project goals, timelines, and requirements..."
+              placeholder="Tell us about your software specifications, AI requirements, web features, design goals, or timeline..."
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               className="w-full px-4 py-3.5 rounded-xl bg-surface border border-surface-border text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary transition-colors text-sm font-medium resize-y"

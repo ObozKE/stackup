@@ -13,6 +13,8 @@ export default function Footer() {
 
   const utilityLinks = [
     { label: "Web Development", href: "/services#web-development" },
+    { label: "Custom Software", href: "/services#custom-software-development" },
+    { label: "AI Integration", href: "/services#ai-integration" },
     { label: "Design", href: "/services#design" },
     { label: "Social Media Management", href: "/services#social-media-management" },
     { label: "Contact Us", href: "/contact" },
@@ -30,6 +32,10 @@ export default function Footer() {
                 STACKUP
               </span>
             </Link>
+
+            <p className="text-muted-foreground text-sm max-w-md font-sans leading-relaxed">
+              Leading software company and web development agency in Nairobi, Kenya. We engineer custom enterprise software, AI automation, high-performance web applications, and modern brand systems.
+            </p>
 
             {/* Direct Contact Info (Regular weight, non-bold) & Socials */}
             <div className="space-y-4 pt-2">

@@ -1,5 +1,4 @@
 import Hero from "@/components/home/hero";
-import LogoCloud from "@/components/home/logo-cloud";
 import ServicesOverview from "@/components/home/services-overview";
 import OurWorkShowcase from "@/components/home/our-work-showcase";
 import ProcessSection from "@/components/home/process-section";
@@ -19,7 +18,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <LogoCloud />
       <ServicesOverview />
       <OurWorkShowcase projects={projects} />
       <ProcessSection />

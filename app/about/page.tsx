@@ -1,40 +1,40 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight, Target, Zap, ShieldCheck, HeartHandshake } from "lucide-react";
+import { ArrowUpRight, Cpu, Zap, ShieldCheck, HeartHandshake } from "lucide-react";
 import ProcessSection from "@/components/home/process-section";
 import CTABand from "@/components/home/cta-band";
 
 export const metadata: Metadata = {
-  title: "About Us — Stackup Kenya",
+  title: "About Us — Stackup Kenya | Software & Web Engineering",
   description:
-    "Learn about Stackup Kenya, a Nairobi-based creative agency uniting strategy, high-performance web development, graphic design, and social marketing.",
+    "Learn about Stackup Kenya, a premier Nairobi-based software company and web development agency building custom enterprise software, AI solutions, web apps, and design systems.",
 };
 
 export default function AboutPage() {
   const pillars = [
     {
-      icon: Target,
-      title: "Strategic Clarity",
+      icon: Cpu,
+      title: "Software Engineering",
       description:
-        "We reject superficial design. Every line of code and visual asset is engineered around measurable business goals and conversion strategy.",
+        "We engineer robust, scalable software architectures — from custom POS & CRM platforms to mission-critical business portals and API backends.",
     },
     {
       icon: Zap,
-      title: "Technical Excellence",
+      title: "High Performance Web",
       description:
-        "Built on modern Next.js and React architecture, our digital products perform at elite speeds with flawless mobile responsiveness and SEO.",
+        "Built on modern Next.js and React technology, our web applications load instantaneously with perfect Core Web Vitals, mobile responsiveness, and SEO.",
     },
     {
       icon: ShieldCheck,
-      title: "Uncompromising Quality",
+      title: "Reliability & Security",
       description:
-        "High-contrast display typography, refined visual hierarchy, and precise execution across digital, social, and print mediums.",
+        "Enterprise-grade code quality, secure payment integrations, role-based access control, and seamless cloud deployments.",
     },
     {
       icon: HeartHandshake,
-      title: "Collaborative Partnership",
+      title: "Long-term Partnership",
       description:
-        "We operate as an extension of your team — transparent communication, predictable timelines, and dedicated post-launch support.",
+        "We operate as your dedicated technical arm — transparent communication, agile milestones, and continuous post-launch maintenance.",
     },
   ];
 
@@ -44,7 +44,7 @@ export default function AboutPage() {
       <section className="py-20 bg-surface/70 border-b border-surface-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-background border border-surface-border text-xs font-semibold uppercase tracking-widest text-foreground">
-            <span>• Studio Intro •</span>
+            <span>• Engineering &amp; Innovation •</span>
           </div>
           <h1 className="font-display text-5xl sm:text-7xl md:text-8xl uppercase tracking-tighter text-foreground max-w-4xl">
             ABOUT STACKUP KENYA.
@@ -61,20 +61,20 @@ export default function AboutPage() {
                 • Core Philosophy •
               </span>
               <h2 className="font-display text-4xl sm:text-5xl uppercase text-foreground">
-                WHERE CREATIVITY MEETS HIGH PERFORMANCE.
+                ENGINEERING INTELLIGENT SOFTWARE &amp; DIGITAL PRODUCTS.
               </h2>
               <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-                At Stackup Kenya, we believe modern brands win at the intersection of striking design and technical performance. A beautiful website that loads slowly fails your business; a fast website with mediocre design fails your brand.
+                At Stackup Kenya, we help ambitious businesses scale through modern software engineering, AI-driven automation, and high-performance web development.
               </p>
               <p className="text-muted-foreground text-base leading-relaxed">
-                Our multi-disciplinary discipline combines Web Development, Graphic & Brand Design, and Social Media Management into one seamless agency experience.
+                From bespoke POS and CRM platforms to enterprise web applications, brand identities, and social media campaigns, we bridge technical engineering with strategic product design.
               </p>
               <div className="pt-2">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground font-bold text-sm rounded-full hover:bg-primary/90 transition-all shadow-md group"
                 >
-                  <span>Work With Stackup Kenya</span>
+                  <span>Build With Stackup Kenya</span>
                   <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </Link>
               </div>

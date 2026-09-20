@@ -2,26 +2,31 @@
   {
     "id": "faq-1",
     "question": "What services does Stackup Kenya specialize in?",
-    "answer": "Stackup Kenya is a full-service creative agency specializing in Web Development, Graphic Design, Brand Design, Product Design, and Social Media Management."
+    "answer": "Stackup Kenya is a full-service software company and digital agency in Nairobi. We specialize in Custom Software Development (POS, CRM, ERP, Portals), AI Integration & Automation, High-Performance Web Development, Graphic & Brand Design, and Data-Driven Social Media Management."
   },
   {
     "id": "faq-2",
-    "question": "Where is Stackup Kenya based and what regions do you serve?",
-    "answer": "We are based in Nairobi, Kenya and work with bold brands, ambitious startups, and established enterprises across Kenya, East Africa, and internationally."
+    "question": "Can Stackup Kenya build custom POS, CRM, or business management software for my company?",
+    "answer": "Yes. We architect tailored Point of Sale (POS) systems, Customer Relationship Management (CRM) tools, inventory trackers, and enterprise web portals designed specifically to streamline and automate your day-to-day operations with secure database and payment integrations (including M-Pesa and card gateways)."
   },
   {
     "id": "faq-3",
-    "question": "What is your typical project timeline?",
-    "answer": "Our typical project timeline is 1 to 4 weeks for all projects."
+    "question": "How do your AI Integration and Automation services work?",
+    "answer": "We integrate smart AI capabilities into your existing products and workflows — including custom AI customer support chatbots, LLM API integrations (OpenAI, Claude, Gemini), automated document parsing, internal AI copilots, and intelligent data extraction to reduce manual work and accelerate business growth."
   },
   {
     "id": "faq-4",
-    "question": "How do we get started with a new project?",
-    "answer": "Simply fill out our contact form or reach out directly at stackupke@gmail.com or call/WhatsApp us at 0790870596. We start every engagement with a quick consultation to align on your vision and deliverables."
+    "question": "Where is Stackup Kenya based and what regions do you serve?",
+    "answer": "We are based in Nairobi, Kenya and collaborate with forward-thinking businesses, ambitious startups, and established enterprises across Kenya, East Africa, and globally."
   },
   {
     "id": "faq-5",
-    "question": "Do you offer post-launch support and ongoing retainers?",
-    "answer": "Yes. We offer ongoing technical maintenance, continuous design retainers, and monthly social media management to ensure your digital presence continuously performs."
+    "question": "What is your typical project timeline?",
+    "answer": "Depending on the scope, web development and design projects typically take 1 to 3 weeks, while comprehensive custom software platforms and multi-stage AI integrations range between 2 to 6 weeks with agile milestone delivery."
+  },
+  {
+    "id": "faq-6",
+    "question": "Do you offer post-launch support and technical maintenance?",
+    "answer": "Yes. We provide dedicated ongoing technical support, software feature updates, security patches, continuous design retainers, and monthly social media management to ensure your systems perform at their peak."
   }
 ]

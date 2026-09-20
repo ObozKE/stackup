@@ -17,7 +17,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface border border-surface-border mb-6 text-xs font-semibold uppercase tracking-widest text-foreground"
         >
           <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-          <span>Creative Studio</span>
+          <span>Software &amp; Web Development Agency</span>
         </motion.div>
 
         {/* Display Heading with Bold Typography */}
@@ -30,27 +30,37 @@ export default function Hero() {
           WE{" "}
           <span className="inline-block align-middle mx-1.5 sm:mx-3 relative w-16 h-10 sm:w-28 sm:h-16 md:w-36 md:h-20 rounded-2xl overflow-hidden shadow-lg border-2 border-background transform -rotate-3 hover:rotate-0 transition-transform duration-300">
             <Image
-              src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=600&auto=format&fit=crop"
-              alt="Web engineering showcase"
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop"
+              alt="Custom software and dashboard systems"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 112px, 144px"
               priority
             />
           </span>{" "}
-          CRAFT DIGITAL <br className="hidden sm:inline" />
+          BUILD SOFTWARE <br className="hidden sm:inline" />
           <span className="inline-block align-middle mx-1.5 sm:mx-3 relative w-16 h-10 sm:w-28 sm:h-16 md:w-36 md:h-20 rounded-2xl overflow-hidden shadow-lg border-2 border-background transform rotate-3 hover:rotate-0 transition-transform duration-300">
             <Image
-              src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=600&auto=format&fit=crop"
-              alt="Brand design artwork"
+              src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=600&auto=format&fit=crop"
+              alt="High-performance web applications"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 112px, 144px"
               priority
             />
           </span>{" "}
-          EXPERIENCES THAT SCALE.
+          &amp; DIGITAL PRODUCTS.
         </motion.h1>
+
+        {/* Subtitle / Comprehensive Value Proposition */}
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="mt-6 text-base sm:text-lg md:text-xl text-muted-foreground font-normal max-w-3xl mx-auto leading-relaxed"
+        >
+          From bespoke enterprise software (POS, CRM, ERP) and intelligent AI automation to high-performance web applications, brand identities, and data-driven growth marketing.
+        </motion.p>
 
         {/* Hero CTAs */}
         <motion.div

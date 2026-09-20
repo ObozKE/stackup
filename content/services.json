@@ -17,6 +17,40 @@
   },
   {
     "id": "002",
+    "title": "Custom Software Development",
+    "slug": "custom-software-development",
+    "shortDescription": "Tailored enterprise software, POS systems, CRM platforms, inventory management, and custom business portals engineered to automate your operations.",
+    "fullDescription": "We architect and develop bespoke software solutions tailored precisely to your operational workflow. Whether you need an intelligent Point of Sale (POS) system, custom Customer Relationship Management (CRM) platform, ERP software, or secure client portals, we build scalable, secure, and robust systems that streamline business operations and drive efficiency.",
+    "tags": ["POS Systems", "CRM Platforms", "ERP & Portals", "Custom APIs", "Automation"],
+    "deliverables": [
+      "Custom POS (Point of Sale) & Inventory Management Systems",
+      "Tailored CRM (Customer Relationship Management) Platforms",
+      "Enterprise Portals, Dashboards & ERP Systems",
+      "Secure Database Architecture & RESTful/GraphQL APIs",
+      "Payment Gateway Integrations (M-Pesa, Cards, Bank APIs)",
+      "Cloud Deployment, Role-based Security & Ongoing Maintenance"
+    ],
+    "featuredImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "003",
+    "title": "AI Integration",
+    "slug": "ai-integration",
+    "shortDescription": "Supercharge your business with custom AI solutions, intelligent chatbots, LLM integrations, and automated smart workflows.",
+    "fullDescription": "We integrate cutting-edge Artificial Intelligence capabilities directly into your existing digital products and business workflows. From fine-tuned AI customer support agents and automated document processing to predictive intelligence and OpenAI/Claude/Gemini API integrations, we help your business operate smarter and faster.",
+    "tags": ["AI Agents", "LLM APIs", "Smart Chatbots", "Workflow Automation", "Machine Learning"],
+    "deliverables": [
+      "Custom AI Chatbots & Customer Support Agents",
+      "LLM API Integrations (OpenAI, Claude, Gemini, DeepSeek)",
+      "Intelligent Workflow & Business Process Automation",
+      "AI-Powered Search, Recommendation & Data Extraction",
+      "Custom AI Tools & Internal Productivity Copilots",
+      "Secure Data Pipelines & Retrieval-Augmented Generation (RAG)"
+    ],
+    "featuredImage": "https://images.unsplash.com/photo-1677442136019-21780efad99a?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "004",
     "title": "Design",
     "slug": "design",
     "shortDescription": "Bold graphic design, distinctive visual identities, and dynamic UI/UX interfaces that command attention.",
@@ -32,7 +66,7 @@
     "featuredImage": "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop"
   },
   {
-    "id": "003",
+    "id": "005",
     "title": "Social Media Management",
     "slug": "social-media-management",
     "shortDescription": "Data-driven campaign strategies, compelling visual content, and community growth for modern brands.",

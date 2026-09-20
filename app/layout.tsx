@@ -16,11 +16,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL("https://stackupkenya.studio"),
   title: {
-    default: "Stackup Kenya — Creative Agency | Web Development & Design Nairobi",
+    default: "Stackup Kenya — Software Company & Web Development Agency Nairobi",
     template: "%s | Stackup Kenya",
   },
   description:
-    "Stackup Kenya is a leading full-service creative agency in Nairobi, Kenya. Expert Web Development, Brand Identity, Graphic Design, and Social Media Management for ambitious African and global brands.",
+    "Stackup Kenya is a premier software company and web development agency in Nairobi, Kenya. We engineer custom enterprise software (POS, CRM, ERP), AI solutions, high-performance web applications, and modern brand systems.",
   icons: {
     icon: "/stackup%20svg.svg",
     shortcut: "/stackup%20svg.svg",
@@ -28,14 +28,16 @@ export const metadata: Metadata = {
   },
   keywords: [
     "Stackup Kenya",
-    "Creative Agency Nairobi",
+    "Software Company Nairobi",
     "Web Development Kenya",
+    "Custom Software Kenya",
+    "POS Systems Nairobi",
+    "CRM Development Kenya",
+    "AI Integration Nairobi",
     "Website Design Nairobi",
     "Graphic Design Agency Kenya",
     "UI UX Design Nairobi",
-    "Social Media Management Kenya",
-    "Brand Identity Design Nairobi",
-    "Software Development Agency Kenya",
+    "Software Engineering Agency Kenya",
     "Digital Agency Nairobi",
   ],
   authors: [{ name: "Stackup Kenya", url: "https://stackupkenya.studio" }],
@@ -67,24 +69,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_KE",
     url: "https://stackupkenya.studio",
-    title: "Stackup Kenya — Creative Agency | Web Development & Design Nairobi",
+    title: "Stackup Kenya — Software Company & Web Development Agency Nairobi",
     description:
-      "Leading full-service creative agency in Nairobi, Kenya. Web Development, Brand Design, Graphic Design, & Social Media Management.",
+      "Premier software company and web development agency in Nairobi, Kenya. Custom Software, AI Integrations, Web Apps, & Design Systems.",
     siteName: "Stackup Kenya",
     images: [
       {
         url: "https://stackupkenya.studio/images/projects/brand-design/b1.webp",
         width: 1200,
         height: 630,
-        alt: "Stackup Kenya Creative Agency Showcase",
+        alt: "Stackup Kenya Software and Web Development Showcase",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stackup Kenya — Creative Agency | Nairobi, Kenya",
+    title: "Stackup Kenya — Software Company & Web Agency | Nairobi, Kenya",
     description:
-      "Leading full-service creative agency in Nairobi, Kenya: Web Development, Design, & Social Media Management.",
+      "Premier software company and web development agency in Nairobi, Kenya: Custom Software, AI Solutions, Web Development, & Design.",
     creator: "@stackupkenya",
     images: ["https://stackupkenya.studio/images/projects/brand-design/b1.webp"],
   },
@@ -143,6 +145,9 @@ export default function RootLayout({
         ],
         knowsAbout: [
           "Web Development",
+          "Custom Software Development",
+          "POS Systems & CRM Platforms",
+          "AI Integration & Automation",
           "Website Design",
           "Graphic Design",
           "Brand Identity Design",
@@ -161,7 +166,7 @@ export default function RootLayout({
         url: "https://stackupkenya.studio",
         name: "Stackup Kenya",
         description:
-          "Full-service creative agency in Nairobi, Kenya specializing in Web Development, Graphic & UI/UX Design, and Social Media Management.",
+          "Full-service creative and tech agency in Nairobi, Kenya specializing in Web Development, Custom Software (POS, CRM), AI Integration, Graphic & Brand Design, and Social Media Management.",
         publisher: {
           "@id": "https://stackupkenya.studio/#organization",
         },

@@ -5,9 +5,9 @@ import SocialLinks from "@/components/ui/social-links";
 import { Mail, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Stackup Kenya",
+  title: "Contact Us — Stackup Kenya | Software & Web Engineering",
   description:
-    "Get in touch with Stackup Kenya, a creative agency in Nairobi, Kenya. Send your project brief for Web Development, Design, or Social Media Management.",
+    "Get in touch with Stackup Kenya, a leading software company and web development agency in Nairobi, Kenya. Send your project brief for Custom Software, AI, Web Development, or Design.",
 };
 
 export default function ContactPage() {

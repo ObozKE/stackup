@@ -5,27 +5,27 @@ export default function ProcessSection() {
   const steps = [
     {
       number: "01",
-      title: "Discovery & Strategy",
+      title: "Discovery, Architecture & Strategy",
       description:
-        "We uncover your business objectives, target audience insights, and market position to establish a strategic roadmap for your digital presence.",
+        "We analyze your business workflows, define technical requirements, and map out scalable architectures for your software, web application, AI workflows, or brand strategy.",
     },
     {
       number: "02",
-      title: "Creative Direction",
+      title: "UI/UX & System Design",
       description:
-        "We craft moodboards, visual concepts, architecture blueprints, and design systems that embody your brand identity before pixel-perfect execution.",
+        "We design intuitive user journeys, database schemas, brand design systems, and interactive prototypes tailored for effortless user adoption and conversion.",
     },
     {
       number: "03",
-      title: "Design & Development",
+      title: "Software Engineering & AI Integration",
       description:
-        "We engineer responsive, accessible web applications and produce high-impact graphic design collateral using cutting-edge standards.",
+        "We build robust, secure software (POS, CRM, ERP), modern Next.js web applications, and fine-tuned AI automation models following strict industry best practices.",
     },
     {
       number: "04",
-      title: "Launch & Support",
+      title: "Deployment, QA & Scaled Growth",
       description:
-        "Rigorous cross-browser testing, SEO optimization, and seamless deployment followed by continuous support and growth marketing.",
+        "Rigorous performance and security testing, smooth cloud deployment, and technical SEO, followed by ongoing maintenance and data-driven marketing.",
     },
   ];
 
@@ -36,13 +36,13 @@ export default function ProcessSection() {
           {/* Left Column: Headline + Intro + CTA */}
           <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
             <span className="text-xs uppercase tracking-widest text-primary font-medium block">
-              • Blueprint •
+              • Engineering Blueprint •
             </span>
             <h2 className="font-display text-5xl sm:text-6xl md:text-7xl uppercase text-foreground leading-none">
               OUR PROCESS
             </h2>
             <p className="text-muted-foreground text-base sm:text-lg max-w-md font-sans">
-              Every project follows a structured creative framework. We bridge strategy and execution to deliver predictable, exceptional results on time.
+              Every project follows an agile engineering framework. We bridge technical architecture, smart automation, and product design to deliver high-performing solutions on time.
             </p>
             <div className="pt-2">
               <Link

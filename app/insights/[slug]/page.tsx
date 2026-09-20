@@ -39,6 +39,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     keywords: [
       "Stackup Kenya",
       article.category,
+      "Custom Software Development Kenya",
+      "AI Integration Nairobi",
+      "POS Systems Kenya",
+      "CRM Software Nairobi",
       "Web Development Nairobi",
       "Graphic Design Kenya",
       "Social Media Marketing Nairobi",
@@ -207,10 +211,10 @@ export default async function InsightArticlePage({ params }: PageProps) {
               • Elevate Your Brand •
             </span>
             <h3 className="font-display text-3xl sm:text-4xl uppercase tracking-tight text-white">
-              NEED WEB DEVELOPMENT OR DESIGN SERVICES IN NAIROBI, KENYA?
+              NEED CUSTOM SOFTWARE, AI, OR WEB DEVELOPMENT IN NAIROBI, KENYA?
             </h3>
             <p className="text-white/80 text-sm sm:text-base leading-relaxed">
-              Stackup Kenya helps brands across Kenya and international markets build high-converting websites, striking visual identities, and targeted social media campaigns.
+              Stackup Kenya helps businesses across Kenya and international markets build bespoke software (POS, CRM, ERP), AI integrations, high-converting websites, and distinctive brand identities.
             </p>
             <div>
               <Link

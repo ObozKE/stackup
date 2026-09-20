@@ -7,14 +7,18 @@ export default function CTABand() {
       {/* Dark Radial Glow Background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-primary/5 to-transparent pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
         <span className="text-xs uppercase tracking-widest text-primary font-bold inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 shadow-xs">
-          • Ready to Elevate Your Brand? •
+          • Ready to Scale Your Business? •
         </span>
 
         <h2 className="font-display font-bold text-3xl sm:text-7xl md:text-8xl lg:text-9xl uppercase tracking-tighter text-white leading-[0.92] sm:leading-[0.88] max-w-5xl mx-auto break-words sm:break-normal">
           LET&apos;S BUILD SOMETHING EXTRAORDINARY.
         </h2>
+
+        <p className="text-white/80 text-base sm:text-lg md:text-xl font-normal max-w-2xl mx-auto leading-relaxed">
+          Partner with our engineers and designers to build custom software (POS, CRM, ERP), AI workflows, and high-performance digital products.
+        </p>
 
         <div className="pt-4 flex items-center justify-center">
           <Link

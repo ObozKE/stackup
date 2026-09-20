@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Stackup Kenya — Creative Agency",
+    name: "Stackup Kenya — Software & Web Engineering",
     short_name: "Stackup Kenya",
     description:
-      "Stackup Kenya is a leading full-service creative agency in Nairobi, Kenya: Web Development, Design, & Social Media Management.",
+      "Stackup Kenya is a leading software company and web development agency in Nairobi, Kenya: Custom Software, AI Solutions, Web Development, & Design.",
     start_url: "/",
     display: "standalone",
     background_color: "#0c0c0c",

@@ -8,7 +8,7 @@ import CTABand from "@/components/home/cta-band";
 export const metadata: Metadata = {
   title: "Insights & Articles — Stackup Kenya",
   description:
-    "Perspectives, design principles, and engineering guides from Stackup Kenya on web development, graphic design, and social media marketing in Nairobi.",
+    "Perspectives, software engineering guides, AI integration insights, web development best practices, and brand design principles from Stackup Kenya in Nairobi.",
 };
 
 export default function InsightsPage() {
