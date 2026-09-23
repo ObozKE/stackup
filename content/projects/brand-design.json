@@ -1,93 +1,27 @@
 [
   {
     "id": "brand-design-1",
-    "title": "Brand Design Project 01",
-    "slug": "brand-design-project-01",
+    "title": "Brand Design & Visual Identity",
+    "slug": "brand-design-visual-identity",
     "category": "Brand Design",
-    "subtitle": "Brand Identity & Design System",
-    "summary": "Complete brand overhaul and modern design system.",
-    "tags": ["Brand Design", "Typography", "Visual System"],
+    "subtitle": "Comprehensive Brand Identity & Design System",
+    "summary": "Complete brand overhaul, typographic guidelines, and modern design system.",
+    "tags": ["Brand Design", "Typography", "Visual System", "Identity Guidelines"],
     "image": "/images/projects/brand-design/b1.webp",
     "images": [
       "/images/projects/brand-design/b1.webp",
       "/images/projects/brand-design/b1a.webp",
       "/images/projects/brand-design/b1b.webp",
       "/images/projects/brand-design/b1c.webp",
-      "/images/projects/brand-design/b1d.webp"
+      "/images/projects/brand-design/b1d.webp",
+      "/images/projects/brand-design/b1e.webp",
+      "/images/projects/brand-design/b1f.webp",
+      "/images/projects/brand-design/b1g.webp",
+      "/images/projects/brand-design/b1h.webp",
+      "/images/projects/brand-design/b1i.webp",
+      "/images/projects/brand-design/b1j.webp",
+      "/images/projects/brand-design/b1k.webp"
     ],
     "year": "2026"
-  },
-  {
-    "id": "brand-design-2",
-    "title": "Brand Design Project 02",
-    "slug": "brand-design-project-02",
-    "category": "Brand Design",
-    "medium": "Brand Artwork & Identity",
-    "summary": "High-contrast visual design assets and brand guidelines.",
-    "tags": ["Brand Artwork", "Identity"],
-    "image": "/images/projects/brand-design/b2.webp",
-    "images": [
-      "/images/projects/brand-design/b2.webp",
-      "/images/projects/brand-design/b2a.webp",
-      "/images/projects/brand-design/b2b.webp",
-      "/images/projects/brand-design/b2c.webp"
-    ]
-  },
-  {
-    "id": "brand-design-3",
-    "title": "Brand Design Project 03",
-    "slug": "brand-design-project-03",
-    "category": "Brand Design",
-    "medium": "Visual Identity",
-    "summary": "Custom brand system and stationery design.",
-    "tags": ["Visual System", "Identity"],
-    "image": "/images/projects/brand-design/b3.webp",
-    "images": [
-      "/images/projects/brand-design/b3.webp",
-      "/images/projects/brand-design/b3a.webp",
-      "/images/projects/brand-design/b3b.webp"
-    ]
-  },
-  {
-    "id": "brand-design-4",
-    "title": "Brand Design Project 04",
-    "slug": "brand-design-project-04",
-    "category": "Brand Design",
-    "medium": "Logo & Brand Mark",
-    "summary": "Modern logomark and brand identity system.",
-    "tags": ["Logo", "Brand Mark"],
-    "image": "/images/projects/brand-design/b4.webp",
-    "images": [
-      "/images/projects/brand-design/b4.webp",
-      "/images/projects/brand-design/b4a.webp"
-    ]
-  },
-  {
-    "id": "brand-design-5",
-    "title": "Brand Design Project 05",
-    "slug": "brand-design-project-05",
-    "category": "Brand Design",
-    "medium": "Brand Guidelines",
-    "summary": "Comprehensive brand guidelines and corporate design system.",
-    "tags": ["Guidelines", "Corporate"],
-    "image": "/images/projects/brand-design/b5.webp",
-    "images": [
-      "/images/projects/brand-design/b5.webp",
-      "/images/projects/brand-design/b5a.webp"
-    ]
-  },
-  {
-    "id": "brand-design-6",
-    "title": "Brand Design Project 06",
-    "slug": "brand-design-project-06",
-    "category": "Brand Design",
-    "medium": "Brand Identity Package",
-    "summary": "Full service brand identity package.",
-    "tags": ["Identity", "Branding"],
-    "image": "/images/projects/brand-design/b6.webp",
-    "images": [
-      "/images/projects/brand-design/b6.webp",
-      "/images/projects/brand-design/b6a.webp"
-    ]
   }
 ]
