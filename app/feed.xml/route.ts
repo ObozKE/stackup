@@ -23,7 +23,7 @@ export async function GET() {
   <channel>
     <title>Stackup Kenya — Insights &amp; Articles</title>
     <link>${baseUrl}/insights</link>
-    <description>Perspectives, design principles, and web engineering guides from Stackup Kenya in Nairobi.</description>
+    <description>Perspectives, custom software engineering guides, AI integration insights, and modern web development from Stackup Kenya in Nairobi.</description>
     <language>en-KE</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${baseUrl}/feed.xml" rel="self" type="application/rss+xml"/>

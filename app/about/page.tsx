@@ -5,9 +5,36 @@ import ProcessSection from "@/components/home/process-section";
 import CTABand from "@/components/home/cta-band";
 
 export const metadata: Metadata = {
-  title: "About Us — Stackup Kenya | Software & Web Engineering",
+  title: "About Us — Software Engineering, AI & Web Agency | Nairobi, Kenya",
   description:
-    "Learn about Stackup Kenya, a premier Nairobi-based software company and web development agency building custom enterprise software, AI solutions, web apps, and design systems.",
+    "Learn about Stackup Kenya: a premier Nairobi software company and web engineering agency. We build bespoke enterprise software (POS, CRM, ERP), AI integrations, high-performance web applications, and brand identity systems.",
+  keywords: [
+    "About Stackup Kenya",
+    "Software Company Nairobi",
+    "Software Engineering Agency Kenya",
+    "Web Development Firm Nairobi",
+    "Tech Agency Nairobi Kenya",
+    "POS and CRM Software Developers Kenya",
+    "AI Integration Experts Nairobi",
+  ],
+  alternates: {
+    canonical: "https://stackupkenya.studio/about",
+  },
+  openGraph: {
+    title: "About Us — Stackup Kenya | Software & Web Engineering",
+    description:
+      "Premier Nairobi-based software company and web development agency building custom enterprise software, AI solutions, web apps, and design systems.",
+    url: "https://stackupkenya.studio/about",
+    siteName: "Stackup Kenya",
+    images: [
+      {
+        url: "https://stackupkenya.studio/images/projects/brand-design/b1.webp",
+        width: 1200,
+        height: 630,
+        alt: "About Stackup Kenya Engineering Team",
+      },
+    ],
+  },
 };
 
 export default function AboutPage() {
@@ -38,8 +65,36 @@ export default function AboutPage() {
     },
   ];
 
+  const aboutJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "About Stackup Kenya",
+    description:
+      "Stackup Kenya is a premier software company and web engineering agency in Nairobi, Kenya specializing in Custom Software (POS, CRM), AI Integration, Web Development, and Brand Design.",
+    url: "https://stackupkenya.studio/about",
+    mainEntity: {
+      "@type": "Organization",
+      name: "Stackup Kenya",
+      url: "https://stackupkenya.studio",
+      logo: "https://stackupkenya.studio/stackup%20svg.svg",
+      telephone: "+254790870596",
+      email: "stackupke@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Nairobi",
+        addressRegion: "Nairobi County",
+        addressCountry: "KE",
+      },
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
+      />
+
       {/* About Hero Header with Greyish Surface Background */}
       <section className="py-20 bg-surface/70 border-b border-surface-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">

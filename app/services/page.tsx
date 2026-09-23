@@ -6,14 +6,83 @@ import servicesData from "@/content/services.json";
 import CTABand from "@/components/home/cta-band";
 
 export const metadata: Metadata = {
-  title: "Services — Web, Custom Software, AI & Design",
+  title: "Services — Custom Software, POS/CRM, AI Integration & Web Development",
   description:
-    "Explore Stackup Kenya's core capabilities in Web Development, Custom Software Development (POS, CRM), AI Integration, Graphic & Brand Design, and Social Media Management.",
+    "Explore Stackup Kenya's enterprise engineering services in Nairobi: Custom Software Development (POS, CRM, ERP), AI Integration & Chatbots, High-Performance Web Development, Graphic & Brand Design, and Social Media Marketing.",
+  keywords: [
+    "Custom Software Development Nairobi",
+    "POS Systems Kenya",
+    "Point of Sale Software Nairobi",
+    "Custom CRM Development East Africa",
+    "AI Integration Services Kenya",
+    "AI Chatbots Nairobi",
+    "Next.js Web Development Agency Kenya",
+    "E-commerce Web Developers Nairobi",
+    "M-Pesa API STK Push Integration",
+    "Enterprise Software Development Kenya",
+    "Brand Design Agency Nairobi",
+    "Social Media Marketing Nairobi",
+    "Software Engineering Nairobi Kenya",
+  ],
+  alternates: {
+    canonical: "https://stackupkenya.studio/services",
+  },
+  openGraph: {
+    title: "Services — Custom Software, POS/CRM, AI & Web | Stackup Kenya",
+    description:
+      "Explore Stackup Kenya's engineering services: Custom Software, POS Systems, CRM Platforms, AI Integrations, Web Apps, and Brand Identity.",
+    url: "https://stackupkenya.studio/services",
+    siteName: "Stackup Kenya",
+    images: [
+      {
+        url: "https://stackupkenya.studio/images/projects/brand-design/b1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Stackup Kenya Services Spectrum",
+      },
+    ],
+  },
 };
 
 export default function ServicesPage() {
+  const servicesJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: servicesData.map((service, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Service",
+        name: service.title,
+        description: service.fullDescription,
+        provider: {
+          "@type": "Organization",
+          name: "Stackup Kenya",
+          url: "https://stackupkenya.studio",
+        },
+        areaServed: "Kenya",
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: `${service.title} Deliverables`,
+          itemListElement: service.deliverables.map((d) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: d,
+            },
+          })),
+        },
+      },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
+
       {/* Services Hero Header with Greyish Surface Background */}
       <section className="py-20 bg-surface/70 border-b border-surface-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
@@ -86,7 +155,7 @@ export default function ServicesPage() {
                   {/* Deliverables List */}
                   <div className="pt-4 space-y-3 border-t border-surface-border">
                     <h3 className="text-xs uppercase tracking-widest font-bold text-foreground">
-                      What&apos;s Included & Deliverables:
+                      What&apos;s Included &amp; Deliverables:
                     </h3>
                     <ul className="space-y-2.5">
                       {service.deliverables.map((item) => (

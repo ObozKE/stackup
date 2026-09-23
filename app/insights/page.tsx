@@ -6,14 +6,67 @@ import insightsData from "@/content/insights.json";
 import CTABand from "@/components/home/cta-band";
 
 export const metadata: Metadata = {
-  title: "Insights & Articles — Stackup Kenya",
+  title: "Insights & Articles — Software Engineering, AI & Web Best Practices",
   description:
-    "Perspectives, software engineering guides, AI integration insights, web development best practices, and brand design principles from Stackup Kenya in Nairobi.",
+    "Perspectives, software engineering guides, AI integration insights, POS/CRM architectures, and brand design principles from Stackup Kenya for businesses in Nairobi, Kenya, and globally.",
+  keywords: [
+    "Software Development Blog Kenya",
+    "POS Systems Kenya Guide",
+    "AI Integration Africa Articles",
+    "Next.js Web Development Insights",
+    "Local SEO Nairobi Strategies",
+    "Brand Identity Design East Africa",
+    "Tech Agency Nairobi Insights",
+  ],
+  alternates: {
+    canonical: "https://stackupkenya.studio/insights",
+  },
+  openGraph: {
+    title: "Insights & Articles — Stackup Kenya",
+    description:
+      "Perspectives, software engineering guides, and AI integration insights from Stackup Kenya.",
+    url: "https://stackupkenya.studio/insights",
+    siteName: "Stackup Kenya",
+    images: [
+      {
+        url: "https://stackupkenya.studio/images/projects/brand-design/b1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Stackup Kenya Insights & Articles",
+      },
+    ],
+  },
 };
 
 export default function InsightsPage() {
+  const insightsCollectionJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Stackup Kenya Insights & Engineering Blog",
+    description:
+      "Perspectives, software engineering guides, AI integration insights, and brand design principles from Stackup Kenya.",
+    url: "https://stackupkenya.studio/insights",
+    blogPost: insightsData.map((article) => ({
+      "@type": "BlogPosting",
+      headline: article.title,
+      description: article.summary,
+      url: `https://stackupkenya.studio/insights/${article.slug}`,
+      datePublished: article.date,
+      image: article.image,
+      author: {
+        "@type": "Organization",
+        name: article.author || "Stackup Kenya",
+      },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(insightsCollectionJsonLd) }}
+      />
+
       {/* Hero with Greyish Surface Background */}
       <section className="py-20 bg-surface/70 border-b border-surface-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">

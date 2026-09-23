@@ -5,14 +5,68 @@ import SocialLinks from "@/components/ui/social-links";
 import { Mail, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Stackup Kenya | Software & Web Engineering",
+  title: "Contact Us — Request a Proposal | Software & Web Engineering Nairobi",
   description:
-    "Get in touch with Stackup Kenya, a leading software company and web development agency in Nairobi, Kenya. Send your project brief for Custom Software, AI, Web Development, or Design.",
+    "Get in touch with Stackup Kenya. Book a consultation or request a proposal for Custom Software Development (POS, CRM, ERP), AI Integration, Web Apps, or Brand Design in Nairobi, Kenya.",
+  keywords: [
+    "Contact Stackup Kenya",
+    "Hire Software Developers Kenya",
+    "Hire Web Developers Nairobi",
+    "Request Software Development Proposal Kenya",
+    "POS System Quotation Nairobi",
+    "AI Consulting Nairobi Kenya",
+    "Custom Web App Development Contact",
+  ],
+  alternates: {
+    canonical: "https://stackupkenya.studio/contact",
+  },
+  openGraph: {
+    title: "Contact Us — Stackup Kenya | Software & Web Engineering",
+    description:
+      "Request a proposal or consultation for Custom Software (POS, CRM), AI Integrations, Web Development, or Brand Design in Nairobi, Kenya.",
+    url: "https://stackupkenya.studio/contact",
+    siteName: "Stackup Kenya",
+    images: [
+      {
+        url: "https://stackupkenya.studio/images/projects/brand-design/b1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Contact Stackup Kenya",
+      },
+    ],
+  },
 };
 
 export default function ContactPage() {
+  const contactJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contact Stackup Kenya",
+    description:
+      "Contact Stackup Kenya for software development, AI integration, web engineering, and brand design inquiries in Nairobi, Kenya.",
+    url: "https://stackupkenya.studio/contact",
+    mainEntity: {
+      "@type": "Organization",
+      name: "Stackup Kenya",
+      telephone: "+254790870596",
+      email: "stackupke@gmail.com",
+      url: "https://stackupkenya.studio",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Nairobi",
+        addressRegion: "Nairobi County",
+        addressCountry: "KE",
+      },
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactJsonLd) }}
+      />
+
       {/* Header with Greyish Surface Background */}
       <section className="py-20 bg-surface/70 border-b border-surface-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
@@ -39,7 +93,7 @@ export default function ContactPage() {
                   CONNECT DIRECTLY WITH OUR TEAM
                 </h2>
                 <p className="text-muted-foreground text-base leading-relaxed">
-                  We respond to all inquiries instantly.
+                  We respond to all inquiries promptly. Schedule a consultation or reach us directly via call, WhatsApp, or email.
                 </p>
               </div>
 

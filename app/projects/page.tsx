@@ -4,16 +4,70 @@ import ProjectFilter from "@/components/projects/project-filter";
 import CTABand from "@/components/home/cta-band";
 
 export const metadata: Metadata = {
-  title: "Projects & Portfolio — Stackup Kenya",
+  title: "Projects & Portfolio — Web Apps, Brand Design & Software Systems",
   description:
-    "Explore Stackup Kenya's featured work across Web Development, Brand Identity, Graphic Design, and Social Media Management.",
+    "Explore Stackup Kenya's proven track record of engineering high-performance Web Applications, Brand Identity Systems, Graphic Design Assets, and Social Media Campaigns for clients across Nairobi, Kenya, and internationally.",
+  keywords: [
+    "Web Development Portfolio Kenya",
+    "React Next.js Projects Nairobi",
+    "Brand Design Portfolio Kenya",
+    "Graphic Design Showcase Nairobi",
+    "Social Media Campaign Case Studies Kenya",
+    "Software Development Projects East Africa",
+    "Best Web Developer Portfolio Nairobi",
+  ],
+  alternates: {
+    canonical: "https://stackupkenya.studio/projects",
+  },
+  openGraph: {
+    title: "Projects & Portfolio — Stackup Kenya",
+    description:
+      "Explore Stackup Kenya's featured work across Web Development, Custom Software, Brand Identity, and Digital Design.",
+    url: "https://stackupkenya.studio/projects",
+    siteName: "Stackup Kenya",
+    images: [
+      {
+        url: "https://stackupkenya.studio/images/projects/brand-design/b1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Stackup Kenya Projects Portfolio",
+      },
+    ],
+  },
 };
 
 export default function ProjectsPage() {
   const projects = getProjectsWithExistingImages();
 
+  const portfolioJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Stackup Kenya Portfolio & Projects",
+    description:
+      "Curated showcase of Web Development, Brand Identity Systems, Graphic Design, and Social Media Management engineered by Stackup Kenya.",
+    url: "https://stackupkenya.studio/projects",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: projects.map((p, index) => ({
+        "@type": "CreativeWork",
+        position: index + 1,
+        name: p.title,
+        description: p.summary || p.subtitle || p.category,
+        url: p.websiteUrl || `https://stackupkenya.studio/projects#${p.slug}`,
+        image: p.image.startsWith("http")
+          ? p.image
+          : `https://stackupkenya.studio${p.image}`,
+      })),
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioJsonLd) }}
+      />
+
       {/* Header with Greyish Surface Background */}
       <section className="py-20 bg-surface/70 border-b border-surface-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
