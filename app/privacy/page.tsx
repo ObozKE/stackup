@@ -7,6 +7,16 @@ export const metadata: Metadata = {
   title: "Privacy Policy & Legal Terms — Stackup Kenya",
   description:
     "Legal policies, terms of service, intellectual property guidelines, and privacy practices protecting Stackup Kenya and our clients.",
+  alternates: {
+    canonical: "https://stackupkenya.studio/privacy",
+  },
+  openGraph: {
+    title: "Privacy Policy & Legal Terms — Stackup Kenya",
+    description:
+      "Legal policies, terms of service, and privacy practices for Stackup Kenya.",
+    url: "https://stackupkenya.studio/privacy",
+    siteName: "Stackup Kenya",
+  },
 };
 
 export default function PrivacyPolicyPage() {

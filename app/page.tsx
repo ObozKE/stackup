@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "@/components/home/hero";
 import ServicesOverview from "@/components/home/services-overview";
 import OurWorkShowcase from "@/components/home/our-work-showcase";
@@ -9,6 +10,30 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import insightsData from "@/content/insights.json";
 import { getProjectsWithExistingImages } from "@/lib/projects-loader";
+
+export const metadata: Metadata = {
+  title: "Stackup Kenya — Software Company & Web Development Agency Nairobi",
+  description:
+    "Stackup Kenya is a premier software company and web development agency in Nairobi, Kenya. We engineer custom enterprise software (POS, CRM, ERP), AI solutions, high-performance web applications, and modern brand systems.",
+  alternates: {
+    canonical: "https://stackupkenya.studio",
+  },
+  openGraph: {
+    title: "Stackup Kenya — Software Company & Web Development Agency Nairobi",
+    description:
+      "Premier software company and web development agency in Nairobi, Kenya. We engineer custom enterprise software (POS, CRM, ERP), AI solutions, high-performance web applications, and modern brand systems.",
+    url: "https://stackupkenya.studio",
+    siteName: "Stackup Kenya",
+    images: [
+      {
+        url: "https://stackupkenya.studio/images/projects/brand-design/b1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Stackup Kenya Software and Web Development Showcase",
+      },
+    ],
+  },
+};
 
 export default function Home() {
   const projects = getProjectsWithExistingImages();
