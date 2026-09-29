@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight, Phone, Mail } from "lucide-react";
 import SocialLinks from "@/components/ui/social-links";
+import CookieSettingsButton from "@/components/ui/cookie-settings-button";
 
 export default function Footer() {
   const exploreLinks = [
@@ -113,12 +114,15 @@ export default function Footer() {
         {/* Bottom Copyright & Legal Link Bar */}
         <div className="pt-8 border-t border-surface-border flex flex-col sm:flex-row items-center justify-between text-xs text-muted-foreground gap-4">
           <p>© {new Date().getFullYear()} Stackup Kenya. All rights reserved.</p>
-          <Link
-            href="/privacy"
-            className="font-semibold text-foreground hover:text-primary transition-colors underline decoration-primary/40 underline-offset-4"
-          >
-            Privacy Policy & Legal Terms
-          </Link>
+          <div className="flex items-center gap-6">
+            <CookieSettingsButton />
+            <Link
+              href="/privacy"
+              className="font-semibold text-foreground hover:text-primary transition-colors underline decoration-primary/40 underline-offset-4"
+            >
+              Privacy Policy &amp; Legal Terms
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
