@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Cookie, ShieldCheck, Check, X, SlidersHorizontal } from "lucide-react";
+import { Cookie, X } from "lucide-react";
 
 interface CookiePreferences {
   essential: boolean;
@@ -25,9 +25,11 @@ export default function CookieConsent() {
     timestamp: "",
   });
 
-  // Apply Google Analytics consent status
   const updateGoogleConsent = (analyticsGranted: boolean) => {
-    if (typeof window !== "undefined" && typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === "function") {
+    if (
+      typeof window !== "undefined" &&
+      typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === "function"
+    ) {
       (window as unknown as { gtag: (...args: unknown[]) => void }).gtag("consent", "update", {
         analytics_storage: analyticsGranted ? "granted" : "denied",
         ad_storage: analyticsGranted ? "granted" : "denied",
@@ -44,15 +46,13 @@ export default function CookieConsent() {
         setPreferences(parsed);
         updateGoogleConsent(parsed.analytics);
       } else {
-        // Show banner after brief delay for smooth user experience
-        const timer = setTimeout(() => setVisible(true), 800);
+        const timer = setTimeout(() => setVisible(true), 1000);
         return () => clearTimeout(timer);
       }
     } catch {
       setVisible(true);
     }
 
-    // Global listener so users can re-open settings from Footer anytime
     const handleOpenSettings = () => {
       setVisible(true);
       setShowPreferences(true);
@@ -89,7 +89,7 @@ export default function CookieConsent() {
     });
   };
 
-  const handleDeclineNonEssential = () => {
+  const handleDecline = () => {
     savePreferences({
       essential: true,
       analytics: false,
@@ -98,204 +98,161 @@ export default function CookieConsent() {
     });
   };
 
-  const handleSaveCustom = () => {
-    savePreferences(preferences);
-  };
-
   if (!mounted || !visible) return null;
 
   return (
     <>
-      {/* Main Cookie Banner (Fixed Bottom Float) */}
+      {/* Minimalist Floating Pill Banner */}
       {!showPreferences && (
         <aside
           role="region"
-          aria-label="Cookie Consent Banner"
-          className="fixed bottom-4 sm:bottom-6 inset-x-4 sm:inset-x-auto sm:right-6 sm:max-w-md z-50 animate-in fade-in slide-in-from-bottom-5 duration-300"
+          aria-label="Cookie consent banner"
+          className="fixed bottom-4 sm:bottom-6 left-4 right-4 sm:left-auto sm:right-6 z-50 animate-in fade-in slide-in-from-bottom-3 duration-300 pointer-events-auto"
         >
-          <div className="bg-background/95 backdrop-blur-md border border-surface-border p-6 rounded-[24px] shadow-2xl space-y-4 text-foreground">
-            {/* Header Badge */}
-            <div className="flex items-center justify-between">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface border border-surface-border text-xs font-semibold uppercase tracking-wider text-foreground">
-                <Cookie className="w-3.5 h-3.5 text-primary" />
-                <span>Cookie Preferences</span>
-              </div>
-              <button
-                onClick={handleDeclineNonEssential}
-                aria-label="Dismiss and accept necessary cookies only"
-                className="text-muted-foreground hover:text-foreground transition-colors p-1 rounded-full hover:bg-surface"
-              >
-                <X className="w-4 h-4" />
-              </button>
+          <div className="bg-background/95 backdrop-blur-md border border-surface-border py-3 px-4 sm:px-5 rounded-2xl shadow-xl flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 max-w-lg text-foreground">
+            <div className="flex items-center gap-2.5 flex-1 min-w-0">
+              <Cookie className="w-4 h-4 text-primary shrink-0" />
+              <p className="text-xs text-muted-foreground leading-snug">
+                We use cookies to improve your browsing experience.{" "}
+                <Link
+                  href="/privacy"
+                  className="underline underline-offset-2 hover:text-foreground transition-colors font-medium"
+                >
+                  Privacy
+                </Link>
+              </p>
             </div>
 
-            {/* Description */}
-            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-              We use cookies to improve website functionality, analyze traffic performance, and tailor user experience. You can choose your preferences or accept all cookies.
-            </p>
-
-            {/* Action Buttons */}
-            <div className="flex flex-col gap-2 pt-1">
+            <div className="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+              <button
+                onClick={() => setShowPreferences(true)}
+                className="text-[11px] font-medium text-muted-foreground hover:text-foreground px-2 py-1 transition-colors cursor-pointer"
+              >
+                Settings
+              </button>
+              <button
+                onClick={handleDecline}
+                className="text-xs font-medium px-3 py-1.5 rounded-full border border-surface-border hover:bg-surface text-foreground transition-colors cursor-pointer"
+              >
+                Decline
+              </button>
               <button
                 onClick={handleAcceptAll}
-                className="w-full py-2.5 px-4 bg-primary text-primary-foreground font-semibold text-xs rounded-full hover:bg-primary/90 transition-colors shadow-xs"
+                className="text-xs font-semibold px-4 py-1.5 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-2xs cursor-pointer"
               >
-                Accept All Cookies
+                Accept
               </button>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={handleDeclineNonEssential}
-                  className="flex-1 py-2 px-3 bg-surface hover:bg-surface-border text-foreground font-medium text-xs rounded-full border border-surface-border transition-colors text-center"
-                >
-                  Necessary Only
-                </button>
-                <button
-                  onClick={() => setShowPreferences(true)}
-                  className="flex-1 py-2 px-3 bg-surface hover:bg-surface-border text-foreground font-medium text-xs rounded-full border border-surface-border transition-colors flex items-center justify-center gap-1.5"
-                >
-                  <SlidersHorizontal className="w-3.5 h-3.5" />
-                  <span>Customize</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Legal Link */}
-            <div className="text-[11px] text-muted-foreground text-center pt-1 border-t border-surface-border">
-              Read our{" "}
-              <Link
-                href="/privacy"
-                className="text-foreground underline underline-offset-2 hover:text-primary transition-colors font-medium"
-              >
-                Privacy &amp; Cookie Policy
-              </Link>
             </div>
           </div>
         </aside>
       )}
 
-      {/* Preferences Modal */}
+      {/* Minimalist Settings Modal */}
       {showPreferences && (
         <div
           role="dialog"
           aria-modal="true"
-          aria-labelledby="cookie-modal-title"
-          className="fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex items-center justify-center p-4 animate-in fade-in duration-200"
+          className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 animate-in fade-in duration-150"
         >
-          <div className="bg-background border border-surface-border max-w-lg w-full rounded-[24px] shadow-2xl p-6 sm:p-8 space-y-6 max-h-[90vh] overflow-y-auto">
-            {/* Modal Header */}
-            <div className="flex items-start justify-between pb-4 border-b border-surface-border">
-              <div className="space-y-1">
-                <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-primary font-bold">
-                  <ShieldCheck className="w-4 h-4" />
-                  <span>Privacy Center</span>
-                </div>
-                <h2 id="cookie-modal-title" className="font-display text-2xl uppercase tracking-tight text-foreground">
-                  Cookie Settings
+          <div className="bg-background border border-surface-border max-w-md w-full rounded-2xl shadow-2xl p-6 space-y-5 text-foreground">
+            {/* Header */}
+            <div className="flex items-center justify-between pb-3 border-b border-surface-border">
+              <div className="flex items-center gap-2">
+                <Cookie className="w-4 h-4 text-primary" />
+                <h2 className="font-display text-lg uppercase tracking-tight text-foreground">
+                  Cookie Preferences
                 </h2>
               </div>
               <button
                 onClick={() => setShowPreferences(false)}
-                aria-label="Close modal"
-                className="p-2 rounded-full hover:bg-surface text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="Close"
+                className="p-1 rounded-full text-muted-foreground hover:text-foreground hover:bg-surface transition-colors cursor-pointer"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4" />
               </button>
             </div>
 
-            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-              Customize your cookie preferences below. Essential cookies cannot be turned off as they are required for security and core site functionality.
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              Manage your cookie choices. Essential cookies are required for security and core navigation.
             </p>
 
-            {/* Cookie Categories */}
-            <div className="space-y-4">
+            {/* Toggle Rows */}
+            <div className="space-y-3">
               {/* Essential */}
-              <div className="p-4 rounded-2xl bg-surface border border-surface-border space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="font-semibold text-sm text-foreground">
-                    Strictly Necessary Cookies
-                  </span>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-primary px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/20">
-                    Always Active
-                  </span>
+              <div className="flex items-center justify-between py-2 border-b border-surface-border/60">
+                <div>
+                  <div className="text-xs font-semibold text-foreground">Essential Cookies</div>
+                  <div className="text-[11px] text-muted-foreground">Required for security &amp; basic functions</div>
                 </div>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  Required for site navigation, security verification, session integrity, and remembering privacy choices.
-                </p>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-primary px-2 py-0.5 rounded-full bg-primary/10">
+                  Active
+                </span>
               </div>
 
               {/* Analytics */}
-              <div className="p-4 rounded-2xl bg-surface border border-surface-border space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="font-semibold text-sm text-foreground">
-                    Analytics &amp; Performance Cookies
-                  </span>
-                  <button
-                    type="button"
-                    role="switch"
-                    aria-checked={preferences.analytics}
-                    onClick={() =>
-                      setPreferences((prev) => ({ ...prev, analytics: !prev.analytics }))
-                    }
-                    className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-hidden ${
-                      preferences.analytics ? "bg-primary" : "bg-muted-foreground/30"
-                    }`}
-                  >
-                    <span
-                      className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow-md ring-0 transition duration-200 ease-in-out ${
-                        preferences.analytics ? "translate-x-5" : "translate-x-0"
-                      }`}
-                    />
-                  </button>
+              <div className="flex items-center justify-between py-2 border-b border-surface-border/60">
+                <div>
+                  <div className="text-xs font-semibold text-foreground">Analytics Cookies</div>
+                  <div className="text-[11px] text-muted-foreground">Anonymous usage to improve site speed</div>
                 </div>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  Helps us analyze user interactions anonymously to improve website speed, navigation flow, and user experience (e.g. Google Analytics).
-                </p>
+                <button
+                  type="button"
+                  role="switch"
+                  aria-checked={preferences.analytics}
+                  onClick={() =>
+                    setPreferences((prev) => ({ ...prev, analytics: !prev.analytics }))
+                  }
+                  className={`relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border border-transparent transition-colors duration-200 ease-in-out ${
+                    preferences.analytics ? "bg-primary" : "bg-muted-foreground/30"
+                  }`}
+                >
+                  <span
+                    className={`pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow-xs transition duration-200 ease-in-out ${
+                      preferences.analytics ? "translate-x-4" : "translate-x-0"
+                    }`}
+                  />
+                </button>
               </div>
 
               {/* Functional */}
-              <div className="p-4 rounded-2xl bg-surface border border-surface-border space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="font-semibold text-sm text-foreground">
-                    Functional &amp; Experience Cookies
-                  </span>
-                  <button
-                    type="button"
-                    role="switch"
-                    aria-checked={preferences.functional}
-                    onClick={() =>
-                      setPreferences((prev) => ({ ...prev, functional: !prev.functional }))
-                    }
-                    className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-hidden ${
-                      preferences.functional ? "bg-primary" : "bg-muted-foreground/30"
-                    }`}
-                  >
-                    <span
-                      className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow-md ring-0 transition duration-200 ease-in-out ${
-                        preferences.functional ? "translate-x-5" : "translate-x-0"
-                      }`}
-                    />
-                  </button>
+              <div className="flex items-center justify-between py-2">
+                <div>
+                  <div className="text-xs font-semibold text-foreground">Functional Cookies</div>
+                  <div className="text-[11px] text-muted-foreground">Remembers user settings &amp; preferences</div>
                 </div>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  Enables advanced interactive features and remembers user selections across visits.
-                </p>
+                <button
+                  type="button"
+                  role="switch"
+                  aria-checked={preferences.functional}
+                  onClick={() =>
+                    setPreferences((prev) => ({ ...prev, functional: !prev.functional }))
+                  }
+                  className={`relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border border-transparent transition-colors duration-200 ease-in-out ${
+                    preferences.functional ? "bg-primary" : "bg-muted-foreground/30"
+                  }`}
+                >
+                  <span
+                    className={`pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow-xs transition duration-200 ease-in-out ${
+                      preferences.functional ? "translate-x-4" : "translate-x-0"
+                    }`}
+                  />
+                </button>
               </div>
             </div>
 
-            {/* Modal Actions */}
-            <div className="flex flex-col sm:flex-row items-center gap-3 pt-4 border-t border-surface-border">
+            {/* Actions */}
+            <div className="flex items-center gap-2 pt-2">
               <button
-                onClick={handleSaveCustom}
-                className="w-full sm:flex-1 py-3 px-5 bg-foreground text-background font-semibold text-xs uppercase tracking-wider rounded-full hover:bg-primary hover:text-primary-foreground transition-colors text-center"
+                onClick={() => savePreferences(preferences)}
+                className="flex-1 py-2 px-3 text-xs font-medium rounded-full border border-surface-border hover:bg-surface text-foreground transition-colors cursor-pointer text-center"
               >
-                Save Preferences
+                Save
               </button>
               <button
                 onClick={handleAcceptAll}
-                className="w-full sm:flex-1 py-3 px-5 bg-primary text-primary-foreground font-semibold text-xs uppercase tracking-wider rounded-full hover:bg-primary/90 transition-colors text-center shadow-xs flex items-center justify-center gap-1.5"
+                className="flex-1 py-2 px-3 text-xs font-semibold rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-2xs cursor-pointer text-center"
               >
-                <Check className="w-4 h-4" />
-                <span>Accept All</span>
+                Accept All
               </button>
             </div>
           </div>
